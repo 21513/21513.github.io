@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="icon.png">
-<title>Add-ons</title>
 <style>
 body, html {
   height: 100%;
@@ -31,7 +29,7 @@ body {
 .name {
   width: 250px;
   height: 250px;
-  background-image: url("bannerimg.png");
+  background-image: url("D:/VS Code/baeac/bannerimg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -59,28 +57,28 @@ nav ul {
 nav ul li {
   display: inline;
   padding: 0px;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 nav ul li button {
   background-color: #333333;
   border: none;
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 12px 10px;
   text-decoration: none;
   color: white;
   transition: background-color 0.3s;
 }
 
 nav ul li button:hover {
-  padding: 15px 10px;
+  padding: 12px 10px;
   background-color: #111111;
 }
 
 nav ul li2 {
   display: inline;
   padding: 0px;
-  margin-right: 5px;
+  margin-right: 2px;
   float: right;
 }
 
@@ -88,14 +86,14 @@ nav ul li2 button {
   background-color: #333333;
   border: none;
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 12px 10px;
   text-decoration: none;
   color: white;
   transition: background-color 0.3s;
 }
 
 nav ul li2 button:hover {
-  padding: 15px 10px;
+  padding: 12px 10px;
   background-color: #111111;
 }
 
@@ -166,28 +164,34 @@ header {
   opacity: 1;
 }
 
-img {
-  height: 500px;
+img, video {
   margin: 25px;
   box-shadow: 2px 2px 5px #111111;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-img:hover {
-  transform: scale(1.02, 1.02);
+img:hover, video:hover {
+  transform: scale(1.02);
   box-shadow: 10px 10px 25px #111111;
 }
 
-video {
-  height: 500px;
-  margin: 25px;
-  box-shadow: 2px 2px 5px #111111;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+/* Media query for mobile devices */
+@media only screen and (max-width: 1200px) {
+  /* Stack images vertically */
+  img, video {
+    height: auto;
+    max-width: 90%;
+  }
 }
 
-video:hover {
-  transform: scale(1.02, 1.02);
-  box-shadow: 10px 10px 25px #111111;
+/* Media query for desktop and tablet devices */
+@media only screen and (min-width: 1201px) {
+  img, video {
+    height: 400px;
+    width: auto;
+    max-height: 90% ;
+    max-width: 90%;
+  }
 }
 
 .buy-button {
@@ -233,6 +237,7 @@ footer {
 <body>
   <div class="hero-image">
     <div class="name">
+      <img src="D:/VC Code/baeac/bannerimg.png" alt="">
     </div>
   </div>
 
