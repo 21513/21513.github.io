@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="icon.png">
-<title>Textures</title>
 <style>
 body, html {
   height: 100%;
@@ -31,7 +29,7 @@ body {
 .name {
   width: 250px;
   height: 250px;
-  background-image: url("bannerimg.png");
+  background-image: url("D:/VS Code/baeac/bannerimg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -59,28 +57,28 @@ nav ul {
 nav ul li {
   display: inline;
   padding: 0px;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 nav ul li button {
   background-color: #333333;
   border: none;
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 12px 10px;
   text-decoration: none;
   color: white;
   transition: background-color 0.3s;
 }
 
 nav ul li button:hover {
-  padding: 15px 10px;
+  padding: 12px 10px;
   background-color: #111111;
 }
 
 nav ul li2 {
   display: inline;
   padding: 0px;
-  margin-right: 5px;
+  margin-right: 2px;
   float: right;
 }
 
@@ -88,14 +86,14 @@ nav ul li2 button {
   background-color: #333333;
   border: none;
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 12px 10px;
   text-decoration: none;
   color: white;
   transition: background-color 0.3s;
 }
 
 nav ul li2 button:hover {
-  padding: 15px 10px;
+  padding: 12px 10px;
   background-color: #111111;
 }
 
@@ -143,16 +141,34 @@ header {
   opacity: 1;
 }
 
-img {
-  height: 300px;
+img, video {
   margin: 25px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-img:hover {
-  transform: scale(1.02, 1.02);
+img:hover, video:hover {
+  transform: scale(1.02);
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 1200px) {
+  /* Stack images vertically */
+  img, video {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+/* Media query for desktop and tablet devices */
+@media only screen and (min-width: 1201px) {
+  img, video {
+    height: 300px;
+    width: auto;
+    max-height: 90% ;
+    max-width: 90%;
+  }
 }
 
 header {
@@ -161,7 +177,7 @@ header {
 }
 
 .about {
-    margin: 0% 25%;
+    margin: 0% 20%;
     font-size: x-large;
 }
 
@@ -190,6 +206,7 @@ footer {
 <body>
   <div class="hero-image">
     <div class="name">
+      <img src="D:/VC Code/baeac/bannerimg.png" alt="">
     </div>
   </div>
 
@@ -222,7 +239,7 @@ footer {
     </div>
 
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/LQUeHwS.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Abstract #1</h1>
@@ -231,7 +248,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/UrMBeQx.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Abstract #2</h1>
@@ -240,7 +257,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/NiNyxFY.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Abstract #3</h1>
@@ -249,7 +266,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/DFNc8dm.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Dry Asphalt #1</h1>
@@ -258,7 +275,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/tiG4w8q.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Dry Asphalt #2</h1>
@@ -267,7 +284,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/GLECPHo.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Dry Bark</h1>
@@ -276,7 +293,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/UNpFWuU.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Bark</h1>
@@ -285,7 +302,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/ipHJOEC.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Dead Bark</h1>
@@ -294,7 +311,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/cc4UO3M.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Black Sand #1</h1>
@@ -303,7 +320,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/gw1YEsM.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Black Sand #2</h1>
@@ -312,7 +329,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/PZalEye.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Block Wall</h1>
@@ -321,7 +338,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/CoBJlMM.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Old Brick Wall</h1>
@@ -330,7 +347,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/y8B3oHY.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Brick Wall</h1>
@@ -339,7 +356,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/fu2PNQf.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Broken Asphalt</h1>
@@ -348,7 +365,7 @@ footer {
         </a>
     </div>
     <div class="imgblock">
-        <a href="link" target="_blank">
+        <a href="https://baeac.gumroad.com/l/materials" target="_blank">
         <img src="https://i.imgur.com/AIAv1KX.png" alt="" class="shadow-image">
         <div class="img-text">
             <h1>Corrugated Rusty Metal</h1>
