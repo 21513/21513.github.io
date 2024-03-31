@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>baeac</title>
+
+    <div class="header">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#renders">Renders</a>
+            <a href="#models">Models</a>
+            <a href="#add-ons">Add-ons</a>
+            <a href="about.html">Contact</a>
+        </div>
+          
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
+        </div>
+          
+        <script>
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "0px";
+            }
+
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+        
+        <div class="icon">
+            <a href="#" id="scrollToTop">
+                <img class="logo" src="logo.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("scrollToTop").addEventListener("click", function(event) {
+            event.preventDefault();
+    
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="yap">
+            <h1>Hi, welcome to my brand new website!</h1>
+            <p>On here I will share my renders, 3D models, tips and tricks, and anything I feel fits on here.</p>
+            <p>You can jump to certain pages using the navigation bar on the top left.</p>
+        </div>
+    </div>
+
+    <t id="renders">Renders</t>
+
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/zKF0IUzrF_E">
+                <img src="/renders/beetle.jpg" alt="">
+                <h2>Abandoned Beetle, 2023</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/gqdsc5DdQPc">
+                <img src="/renders/classroom.jpg" alt="">
+                <h2>The Last Day of School, 2022</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/__gJ9VL9z-c">
+                <img src="/renders/plane.jpg" alt="">
+                <h2>Last Flight, 2023</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/RGDR9DW_mQg">
+                <img src="/renders/canyon.jpg" alt="">
+                <h2>Canyons, 2023</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/bApppAYJu-8">
+                <img src="/renders/old shack.jpg" alt="">
+                <h2>Old Shack, 2024</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://youtu.be/53sibzKVaO8">
+                <img src="/renders/water.jpg" alt="">
+                <h2>Water Shader, 2023</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://www.youtube.com/@baeac">
+                <img src="/renders/jj.jpg" alt="">
+                <h2>Jungle Jewels, 2023</h2>
+            </a>
+        </div>
+    </div>
+    <div class="page">
+        <div class="container">
+            <a href="https://www.youtube.com/@baeac">
+                <img src="/renders/dark-forest.jpg" alt="">
+                <h2>Dark Forest, 2024</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="group">
+            <div class="card">
+                <img class="card-img" src="/renders/beetle-composite.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/beetle-composite-2.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/insurance-composite.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/last-flight-composite.jpg">
+            </div>
+
+            
+
+            <div class="card">
+                <img class="card-img" src="/renders/fish.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/city.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/forest-poster.jpg">
+            </div>
+            <div class="card">
+                <img class="card-img" src="/renders/school.jpg">
+            </div>
+        </div>
+    </div>
+
+    <t id="models">Models</t>
+    
+    <div class="page">
+        <div class="container">
+            <a href="https://baeac.gumroad.com/l/pallets">
+                <img class="slides1 fade" src="models/pallets/1.jpg" alt="">
+                <img class="slides1 fade" src="models/pallets/2.jpg" alt="">
+                <img class="slides1 fade" src="models/pallets/3.jpg" alt="">
+                <img class="slides1 fade" src="models/pallets/4.jpg" alt="">
+
+                <div class="buy">
+                    <button class="buy-button">Buy Now</button>
+                    <h3>Wooden Shipping Pallets</h3>
+                </div>
+            </a>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            carousel();
+    
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slides1");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 5000);
+            }
+        </script>
+    </div>
+
+    <div class="page">
+        <div class="container">
+            <a href="https://baeac.gumroad.com/l/military-crate">
+                <img class="slides2 fade" src="models/military-crate/1.jpg" alt="">
+                <img class="slides2 fade" src="models/military-crate/2.jpg" alt="">
+                <img class="slides2 fade" src="models/military-crate/3.jpg" alt="">
+                <img class="slides2 fade" src="models/military-crate/4.jpg" alt="">
+
+                <div class="buy">
+                    <button class="buy-button">Buy Now</button>
+                    <h3>Military Supply Crate</h3>
+                </div>
+            </a>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            carousel();
+    
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slides2");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 5000);
+            }
+        </script>
+    </div>
+
+    <t id="add-ons">Add-Ons</t>
+
+    <div class="page">
+        <div class="container">
+            <a href="https://www.gumroad.com/l/ps1-ify">
+                <img src="/renders/ps1-ify.jpg" alt="">
+                <h2>PS1-ify v1.3</h2>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

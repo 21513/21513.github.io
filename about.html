@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>baeac</title>
+
+    <div class="header">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">Back</a>
+        </div>
+          
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
+        </div>
+          
+        <script>
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "0px";
+            }
+
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+        
+        <div class="icon">
+            <a href="#" id="scrollToTop">
+                <img class="logo" src="logo.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("scrollToTop").addEventListener("click", function(event) {
+            event.preventDefault();
+    
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="yap" style="padding-left: 35vw; padding-right: 35vw;">
+            <h1>About me</h1>
+            <p> </p>
+            <p>I have been using Blender for about 5 years now and I am really passionate about anything 3D related.
+                I make videos on the internet showcasing how I approach certain challenges in making 3D art (mainly environment art).
+                <p> </p>
+                I love nature and animals and really let that show in my art, that's also where my focus is for the future.
+                <p> </p>
+                I would love to make an animated series in a realistic style where I can just go crazy with the story.
+                I have had this dream for years so I guess it's my long term goal now.
+            </p>
+        </div>
+    </div>
+    <div class="page">
+        <div class="yap">
+            <h1>Contact Information</h1>
+            <p> </p>
+            <p>You can reach me via email for any business inquiries at:</p>
+            <p>baeacbusiness@gmail.com</p>
+            <p> </p>
+            <p>For anything else, please contact me on Discord or Instagram:</p>
+            <p>https://discord.gg/VhYy86gSAy</p>
+            <p>https://instagram.com/21513_</p>
+        </div>
+    </div>
+</body>
+</html>

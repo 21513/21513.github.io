@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #DDDDDD;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #010101;
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #010101;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #DDDDDD;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #010101;
+    color: white;
+    padding: 0px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #010101;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.icon {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 4rem;
+}
+
+.slides {
+    display: none;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: x-large;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: bolder;
+}
+
+t {
+    font-size: xxx-large;
+    display: flex;
+    justify-content: center;
+}
+
+.yap {
+    text-align: center;
+    padding: 5rem;
+}
+
+body {
+    background-repeat: repeat;
+    font-weight: normal;
+    background-color: #0e0e0e;
+}
+
+.page {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.group {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    padding: 1rem;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transition: all 0.5s;
+    transform: scale(1.01);
+}
+
+.card-img {
+    width: 24rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.container {
+    padding: 10px;
+}
+
+img {
+    max-height: 60vh;
+    max-width: 80vw;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+img:hover {
+    transition: all 0.5s;
+    transform: scale(1.01);
+}
+
+.buy {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.buy-button {
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #DDDDDD;
+    color: #010101;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
