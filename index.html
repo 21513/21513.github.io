@@ -14,7 +14,7 @@
             <a href="#renders">Renders</a>
             <a href="#models">Models</a>
             <a href="#add-ons">Add-ons</a>
-            <a href="./about">About</a>
+            <a href="about.html">About</a>
         </div>
           
         <div id="main">
@@ -24,10 +24,12 @@
         <script>
             function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "0px";
             }
 
             function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
             }
         </script>
         
@@ -49,6 +51,9 @@
         });
     </script>
 </head>
+
+
+
 <body>
     <div class="page">
         <div class="yap">
@@ -158,72 +163,6 @@
     </div>
 
     <t id="models">Models</t>
-    
-    <div class="page">
-        <div class="container">
-            <a href="https://baeac.gumroad.com/l/pallets">
-                <img class="slides1 fade" src="models/pallets/1.jpg" alt="">
-                <img class="slides1 fade" src="models/pallets/2.jpg" alt="">
-                <img class="slides1 fade" src="models/pallets/3.jpg" alt="">
-                <img class="slides1 fade" src="models/pallets/4.jpg" alt="">
-
-                <div class="buy">
-                    <button class="buy-button">Buy Now</button>
-                    <h3>Wooden Shipping Pallets</h3>
-                </div>
-            </a>
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            carousel();
-    
-            function carousel() {
-            var i;
-            var x = document.getElementsByClassName("slides1");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {slideIndex = 1}
-            x[slideIndex-1].style.display = "block";
-            setTimeout(carousel, 5000);
-            }
-        </script>
-    </div>
-
-    <div class="page">
-        <div class="container">
-            <a href="https://baeac.gumroad.com/l/military-crate">
-                <img class="slides2 fade" src="models/military-crate/1.jpg" alt="">
-                <img class="slides2 fade" src="models/military-crate/2.jpg" alt="">
-                <img class="slides2 fade" src="models/military-crate/3.jpg" alt="">
-                <img class="slides2 fade" src="models/military-crate/4.jpg" alt="">
-
-                <div class="buy">
-                    <button class="buy-button">Buy Now</button>
-                    <h3>Military Supply Crate</h3>
-                </div>
-            </a>
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            carousel();
-    
-            function carousel() {
-            var i;
-            var x = document.getElementsByClassName("slides2");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > x.length) {slideIndex = 1}
-            x[slideIndex-1].style.display = "block";
-            setTimeout(carousel, 5000);
-            }
-        </script>
-    </div>
 
     <t id="add-ons">Add-Ons</t>
 
@@ -233,6 +172,44 @@
                 <img src="/renders/ps1-ify.jpg" alt="">
                 <h2>PS1-ify v1.3</h2>
             </a>
+        </div>
+    </div>
+
+
+    <div class="page">
+        <div class="group">
+            <div class="product">
+                <a href="https://baeac.gumroad.com/l/wooden-ammo-box">
+                    <img src="models/wooden-ammo-box/1.jpg" alt="">
+    
+                    <div class="buy">
+                        <button class="buy-button">Buy Now</button>
+                        <h3>Wooden Ammo Box</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product">
+                <a href="https://baeac.gumroad.com/l/military-crate">
+                    <img src="models/military-crate/1.jpg" alt="">
+    
+                    <div class="buy">
+                        <button class="buy-button">Buy Now</button>
+                        <h3>Military Supply Crate</h3>
+                    </div>
+                </a>
+            </div>
+    
+            <div class="product">
+                <a href="https://baeac.gumroad.com/l/pallets">
+                    <img src="models/pallets/1.jpg" alt="">
+
+                    <div class="buy">
+                        <button class="buy-button">Buy Now</button>
+                        <h3>Wooden Shipping Pallets</h3>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </body>
