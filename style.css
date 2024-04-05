@@ -209,6 +209,33 @@ img:hover {
     margin: auto;
 }
 
+.alpha {
+    padding: 8px;
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+    margin: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+    .alpha {
+        max-width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .alpha {
+        max-width: 15vw;
+    }
+}
+
+.alpha img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
 .buy {
     display: flex;
     justify-content: left;
