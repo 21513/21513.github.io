@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>baeac</title>
+
+    <div class="header">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="./">Home</a>
+            <a href="./about">About</a>
+        </div>
+          
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
+        </div>
+          
+        <script>
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "0px";
+            }
+
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+        
+        <div class="icon">
+            <a href="#" id="scrollToTop">
+                <img class="logo" src="logo.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("scrollToTop").addEventListener("click", function(event) {
+            event.preventDefault();
+    
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <div class="page">
+        <div class="yap">
+            <p>Hey! You found the free alpha textures :)</p>
+            <p>These textures are great for programs like Substance Painter, Blender, and any other texture painting program.</p>
+            <p>Textures are 1k in .png format.</p>
+            <p> </p>
+            <p>These textures are free to use.</p>
+            <p>If you have any questions, please email me at</p><a href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="group" id="assetContainer">
+
+        </div>
+    </div>
+
+    <script>
+        const fileNames = [
+            "7.62mm Ammo 1.png",
+            "7.62mm Ammo 2.png",
+            "7.62mm Ammo 3.png",
+            "7.62mm Ammo 4.png",
+            "Arrow 1.png",
+            "Arrow 2.png",
+            "Arrow 3.png",
+            "Arrow 4.png",
+            "Arrow 5.png",
+            "Block B.png",
+            "Cracks 1.png",
+            "Cracks 2.png",
+            "Cross 1.png",
+            "Fingerprint 1.png",
+            "Fingerprint 2.png",
+            "Fingerprint 3.png",
+            "Fingerprint 4.png",
+            "General Waste 1.png",
+            "General Waste 2.png",
+            "Graffiti 1.png",
+            "Graffiti 2.png",
+            "Graffiti 3.png",
+            "Graffiti 4.png",
+            "Graffiti 5.png",
+            "Grunge 1.png",
+            "Grunge 2.png",
+            "Grunge 3.png",
+            "Grunge 4.png",
+            "Grunge 5.png",
+            "Grunge 6.png",
+            "Grunge 7.png",
+            "Grunge 8.png",
+            "GV Signature.png",
+            "Honey.png",
+            "Label 1.png",
+            "Label 2.png",
+            "Label 3.png",
+            "Label 4.png",
+            "Label 5.png",
+            "Label 6.png",
+            "Label 7.png",
+            "Label 8.png",
+            "Label 9.png",
+            "Label 10.png",
+            "Label 11.png",
+            "Logo 1.png",
+            "Logo 2.png",
+            "Price 1.png",
+            "Price 2.png",
+            "Public Phone 1.png",
+            "QR Code.png",
+            "Random Numbers 1.png",
+            "Random Numbers 2.png",
+            "Random Numbers 3.png",
+            "Random Numbers 4.png",
+            "Random Numbers 5.png",
+            "Random Numbers 6.png",
+            "Sign 1.png",
+            "SIgn 2.png",
+            "Sign 3.png",
+            "Sign 4.png",
+            "Sign 5.png",
+            "Sign 6.png",
+            "Sign 7.png",
+            "Sign 8.png",
+            "Sign 9.png",
+            "Sign 10.png",
+            "Sign 11.png",
+            "Sign 12.png",
+            "Trash Can 1.jpg",
+            "Warning 1.jpg",
+            "Waste.png",
+            "Welcome 1.png",
+            "Graffiti 6.png",
+            "Graffiti 7.png",
+            "Net Weight 1.png",
+        ];
+
+        function createAssetLink(fileName) {
+            const div = document.createElement("div");
+            div.classList.add("alpha");
+            const a = document.createElement("a");
+            a.href = "assets/" + fileName;
+            a.download = "";
+            const img = document.createElement("img");
+            img.src = "assets/" + fileName;
+            img.alt = fileName;
+            a.appendChild(img);
+            div.appendChild(a);
+            return div;
+        }
+
+        const assetContainer = document.getElementById("assetContainer");
+        fileNames.forEach(fileName => {
+            assetContainer.appendChild(createAssetLink(fileName));
+        });
+    </script>
+</body>
+</html>
