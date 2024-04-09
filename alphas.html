@@ -51,21 +51,57 @@
             });
         });
     </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q5J7XZ5FQQ');
-    </script>
 </head>
 
 
 
 <body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q5J7XZ5FQQ');
+
+        // Check if the user has previously accepted
+        window.addEventListener('DOMContentLoaded', function() {
+            var hasAccepted = localStorage.getItem('hasAccepted');
+            if (hasAccepted === 'true') {
+                closePopup();
+            }
+        });
+    </script>
+
+    <script>
+        function denyClick() {
+            closePopup();
+        }
+
+        function acceptClick() {
+            // Call gtag with appropriate event parameters
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Accept Button Clicked'
+            });
+
+            // Store the user's acceptance in local storage
+            localStorage.setItem('hasAccepted', 'true');
+
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <div class="popup">
+        <p>This website uses cookies to enhance user experience and analyze website traffic.</p>
+        <button class="deny-button" onclick="denyClick()">Deny</button>
+        <button class="accept-button" onclick="acceptClick()">Accept</button>
+    </div>
+
     <div class="page">
         <div class="yap">
             <p>Hey! You found the free alpha textures :)</p>
@@ -187,5 +223,24 @@
             assetContainer.appendChild(createAssetLink(fileName));
         });
     </script>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2024 baeac. All rights reserved.
+        </div>
+        <div class="footer-content">
+            <div class="links">
+                <a href="https://www.youtube.com/@baeac">YouTube</a>
+                <a href="https://baeac.gumroad.com">Gumroad</a>
+                <a href="https://www.patreon.com/baeac">Patreon</a>
+                <a href="https://www.cgtrader.com/baeac">CGTrader</a>
+            </div>
+            <div class="info">
+                <a class="email" href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+                <a href="./cookie-disclaimer">Cookie Disclaimer</a>
+                <a href="./about">About</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
