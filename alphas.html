@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="80+ free alpha textures for texture painting in Substance Painter, Blender and more. Completely free to download and use anywhere.">
+    <meta name="description" content="100+ free alpha textures for texture painting in Substance Painter, Blender and more. Completely free to download and use anywhere. Constantly growing library of free-to-use alpha images.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
@@ -16,6 +16,7 @@
             <a href="./#models">Models</a>
             <a href="./#renders">Renders</a>
             <a href="./#add-ons">Add-ons</a>
+            <a href="./alphas">Alphas</a>
             <a href="./about">About</a>
         </div>
           
@@ -114,6 +115,37 @@
         </div>
     </div>
 
+    <div class="search-bar">
+        <input class="search-input" type="text" id="searchInput" placeholder="Search textures..." onkeypress="handleKeyPress(event)">
+        <button class="search-button" onclick="search()">&#x1F50E;&#xFE0E;</button>
+    </div>
+
+    <script>
+        function search() {
+            var input, filter, assetContainer, assets, i, img, fileName;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            assetContainer = document.getElementById("assetContainer");
+            assets = assetContainer.getElementsByClassName("alpha");
+
+            for (i = 0; i < assets.length; i++) {
+                img = assets[i].getElementsByTagName("img")[0];
+                fileName = img.alt;
+                if (fileName.toUpperCase().indexOf(filter) > -1) {
+                    assets[i].style.display = "";
+                } else {
+                    assets[i].style.display = "none";
+                }
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                search();
+            }
+        }
+    </script>
+
     <div class="page">
         <div class="group" id="assetContainer">
 
@@ -122,87 +154,106 @@
 
     <script>
         const fileNames = [
-            "7.62mm Ammo 1.png",
-            "7.62mm Ammo 2.png",
-            "7.62mm Ammo 3.png",
-            "7.62mm Ammo 4.png",
-            "Arrow 1.png",
-            "Arrow 2.png",
-            "Arrow 3.png",
-            "Arrow 4.png",
-            "Arrow 5.png",
-            "Block B.png",
-            "Brush 1.png",
-            "Brush 2.png",
-            "Brush 3.png",
-            "Brush 4.png",
-            "Brush 5.png",
-            "Cracks 1.png",
-            "Cracks 2.png",
-            "Cross 1.png",
-            "Fingerprint 1.png",
-            "Fingerprint 2.png",
-            "Fingerprint 3.png",
-            "Fingerprint 4.png",
-            "General Waste 1.png",
-            "General Waste 2.png",
-            "Graffiti 1.png",
-            "Graffiti 2.png",
-            "Graffiti 3.png",
-            "Graffiti 4.png",
-            "Graffiti 5.png",
-            "Grunge 1.png",
-            "Grunge 2.png",
-            "Grunge 3.png",
-            "Grunge 4.png",
-            "Grunge 5.png",
-            "Grunge 6.png",
-            "Grunge 7.png",
-            "Grunge 8.png",
-            "GV Signature.png",
+            "7.62mmAmmo1.png",
+            "7.62mmAmmo2.png",
+            "7.62mmAmmo3.png",
+            "7.62mmAmmo4.png",
+            "7.62mmAmmo5.png",
+            "7.62mmAmmo6.png",
+            "Arrow1.png",
+            "Arrow2.png",
+            "Arrow3.png",
+            "Arrow4.png",
+            "Arrow5.png",
+            "BlockB.png",
+            "Brush1.png",
+            "Brush2.png",
+            "Brush3.png",
+            "Brush4.png",
+            "Brush5.png",
+            "Circle1.png",
+            "Circle2.png",
+            "Circle3.png",
+            "Circle4.png",
+            "Circle5.png",
+            "Circle6.png",
+            "Cracks1.png",
+            "Cracks2.png",
+            "Cross1.png",
+            "Cross2.png",
+            "Fingerprint1.png",
+            "Fingerprint2.png",
+            "Fingerprint3.png",
+            "Fingerprint4.png",
+            "GVSignature.png",
+            "GeneralWaste1.png",
+            "GeneralWaste2.png",
+            "Graffiti1.png",
+            "Graffiti10.png",
+            "Graffiti2.png",
+            "Graffiti3.png",
+            "Graffiti4.png",
+            "Graffiti5.png",
+            "Graffiti6.png",
+            "Graffiti7.png",
+            "Graffiti8.png",
+            "Graffiti9.png",
+            "Grunge1.png",
+            "Grunge2.png",
+            "Grunge3.png",
+            "Grunge4.png",
+            "Grunge5.png",
+            "Grunge6.png",
+            "Grunge7.png",
+            "Grunge8.png",
             "Honey.png",
-            "Label 1.png",
-            "Label 2.png",
-            "Label 3.png",
-            "Label 4.png",
-            "Label 5.png",
-            "Label 6.png",
-            "Label 7.png",
-            "Label 8.png",
-            "Label 9.png",
-            "Label 10.png",
-            "Label 11.png",
-            "Logo 1.png",
-            "Logo 2.png",
-            "Price 1.png",
-            "Price 2.png",
-            "Public Phone 1.png",
-            "QR Code.png",
-            "Random Numbers 1.png",
-            "Random Numbers 2.png",
-            "Random Numbers 3.png",
-            "Random Numbers 4.png",
-            "Random Numbers 5.png",
-            "Random Numbers 6.png",
-            "Sign 1.png",
-            "SIgn 2.png",
-            "Sign 3.png",
-            "Sign 4.png",
-            "Sign 5.png",
-            "Sign 6.png",
-            "Sign 7.png",
-            "Sign 8.png",
-            "Sign 9.png",
-            "Sign 10.png",
-            "Sign 11.png",
-            "Sign 12.png",
-            "Trash Can 1.jpg",
-            "Warning 1.jpg",
+            "Label1.png",
+            "Label10.png",
+            "Label11.png",
+            "Label2.png",
+            "Label3.png",
+            "Label4.png",
+            "Label5.png",
+            "Label6.png",
+            "Label7.png",
+            "Label8.png",
+            "Label9.png",
+            "Logo1.png",
+            "Logo2.png",
+            "NetWeight1.png",
+            "Price1.png",
+            "Price2.png",
+            "PublicPhone1.png",
+            "QRCode.png",
+            "RandomNumbers1.png",
+            "RandomNumbers2.png",
+            "RandomNumbers3.png",
+            "RandomNumbers4.png",
+            "RandomNumbers5.png",
+            "RandomNumbers6.png",
+            "SIgn2.png",
+            "Sign1.png",
+            "Sign10.png",
+            "Sign11.png",
+            "Sign12.png",
+            "Sign13.png",
+            "Sign14.png",
+            "Sign15.png",
+            "Sign16.png",
+            "Sign3.png",
+            "Sign4.png",
+            "Sign5.png",
+            "Sign6.png",
+            "Sign7.png",
+            "Sign8.png",
+            "Sign9.png",
+            "Square1.png",
+            "Square2.png",
+            "Square3.png",
+            "TrashCan1.png",
+            "Warning1.png",
             "Waste.png",
-            "Welcome 1.png",
-            "Graffiti 6.png",
-            "Graffiti 7.png",
-            "Net Weight 1.png",
+            "Welcome1.png",
         ];
 
         function createAssetLink(fileName) {
