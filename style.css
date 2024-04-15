@@ -268,6 +268,34 @@ img:hover {
     border-radius: 20px;
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #010101;
+    color: #ffffff;
+}
+
+.search-button {
+    margin-left: 10px;
+    width: 50px;
+    border-radius: 25px;
+    border-style: none;
+    color: #ffffff;
+    background-color: #010101;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    color: #010101;
+    background-color: #ffffff;
+}
+
 footer {
     background-color: #010101;
     color: #ffffff;
@@ -318,6 +346,10 @@ footer {
     .alpha {
         max-width: 30vw;
     }
+
+    .search-input {
+        width: 50vw;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -331,5 +363,9 @@ footer {
 
     .alpha {
         max-width: 15vw;
+    }
+
+    .search-input {
+        width: 25vw;
     }
 }
