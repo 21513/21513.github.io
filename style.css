@@ -296,6 +296,10 @@ img:hover {
     background-color: #ffffff;
 }
 
+.yap img {
+    margin: 2rem;
+}
+
 footer {
     background-color: #010101;
     color: #ffffff;
