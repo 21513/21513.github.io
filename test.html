@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Div</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Search">
+    <div id="searchableDiv" data-tags="tag1 tag2 tag3" data-description="This is a searchable div">
+        Content of the searchable div
+    </div>
+
+    <script>
+        // Function to filter searchable div based on input value
+        function filterDivs() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var div = document.getElementById('searchableDiv');
+            var tags = div.dataset.tags.toLowerCase();
+            var description = div.dataset.description.toLowerCase();
+
+            if (tags.includes(input) || description.includes(input)) {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+
+        // Event listener for input change
+        document.getElementById('searchInput').addEventListener('input', filterDivs);
+    </script>
+</body>
+</html>

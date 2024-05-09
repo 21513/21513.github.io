@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,31 +122,240 @@
         <button class="deny-button" onclick="denyClick()">Deny</button>
         <button class="accept-button" onclick="acceptClick()">Accept</button>
     </div>
-    
-    <div class="page">
-        <div class="yap">
-            <h1>Hi, welcome to my brand new website!</h1>
-            <p>On here I will share my renders, 3D models, tips and tricks, and anything I feel fits on here.</p>
-            <p>You can jump to certain pages using the navigation bar on the top left.</p>
-        </div>
+
+    <div class="banner">
     </div>
 
-    <t id="models">Models</t>
+    <div class="patreon">
+        <a class="patreon-link" href="https://www.patreon.com/baeac">
+            <img src="images/patreon.jpg" alt="">
+        </a>
+    </div>
+
+    <h1 id="models">Models</h1>
+
+    <div class="sort-container">
+        <input class="search-input" type="text" id="searchInput" placeholder="Search models..." onkeypress="handleKeyPress(event)">
+        <button class="search-button" onclick="search()">&#x1F50E;&#xFE0E;</button>
+
+        <select id="sortSelect">
+            <option value="dateDesc">Newest first</option>
+            <option value="dateAsc">Oldest first</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+        </select>
+    </div>
+
+    <script>
+        function search() {
+            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+            var products = document.getElementsByClassName('product');
+    
+            for (var i = 0; i < products.length; i++) {
+                var tags = products[i].getAttribute('data-tag').toLowerCase();
+                if (tags.includes(searchInput)) {
+                    products[i].style.display = 'block';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                search();
+            }
+        }
+    </script>
 
     <div class="page">
         <div class="group">
-            <div class="product">
-                <a href="https://baeac.gumroad.com/l/wooden-crate">
-                    <img src="models/wooden-crate.jpg" alt="FREE Wooden Crate 3D-Model">
+
+            <div class="product" data-date="2024-05-02" data-price="3.00" data-tag="old
+            rusty
+            file
+            cabinets
+            green
+            gray
+            grey
+            beige
+            office
+            drawer
+            cabinet
+            furniture
+            dirty
+            old
+            storage
+            interior
+            old furniture
+            shelf
+            files
+            folders
+            documents
+            office
+            file
+            document
+            classified
+            confidential
+            retro
+            contemporary
+            interior office">
+                <a href="https://baeac.gumroad.com/l/file-cabinets">
+                    <img src="models/file-cabinets.jpg" alt="Old Rusty Office File Cabinets 3D-Model">
     
                     <div class="buy">
-                        <button class="buy-button">FREE</button>
-                        <h3>Wooden Crate</h3>
+                        <button class="buy-button">€3.00</button>
+                        <h3>Old Rusty File Cabinets</h3>
                     </div>
                 </a>
             </div>
 
-            <div class="product">
+            <div class="product" data-date="2024-05-01" data-price="3.00" data-tag="paint
+            old
+            worn
+            dirty
+            painted
+            pot
+            can
+            cans
+            bucket
+            steel
+            lid
+            container
+            art
+            painter
+            walls
+            green
+            red
+            blue
+            yellow
+            rust
+            household
+            tools
+            household tools">
+                <a href="https://baeac.gumroad.com/l/paint-cans">
+                    <img src="models/paint-cans.jpg" alt="30 Old Dirty Paint Cans 3D-Model Collection">
+    
+                    <div class="buy">
+                        <button class="buy-button">€3.00</button>
+                        <h3>30 Old Dirty Paint Cans</h3>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product" data-date="2024-04-30" data-price="3.00" data-tag="metal
+            cart
+            serving
+            furniture
+            outdoors
+            old
+            worn
+            low poly
+            game ready
+            rigged
+            table
+            restaurant
+            serve
+            plates
+            food
+            hotel
+            cafe
+            kitchen
+            chef
+            cook
+            interior">
+                <a href="https://baeac.gumroad.com/l/metal-cart">
+                    <img src="models/metal-cart.jpg" alt="Old Metal Serving Cart 3D-Model">
+    
+                    <div class="buy">
+                        <button class="buy-button">€3.00</button>
+                        <h3>Old Metal Serving Cart</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product" data-date="2024-04-29" data-price="0.00" data-tag="milk
+            cold
+            food
+            ice
+            miscellaneous
+            jug
+            old
+            worn
+            low poly
+            game ready
+            free
+            people
+            fridge
+            refrigerator
+            dirty
+            empty
+            bottle
+            cow
+            store
+            groceries
+            beverage
+            free">
+                <a href="https://baeac.gumroad.com/l/milk-jug">
+                    <img src="models/milk-jug.jpg" alt="FREE Old Worn Milk Jug 3D-Model">
+    
+                    <div class="buy">
+                        <button class="buy-button">FREE</button>
+                        <h3>Old Worn Milk Jug</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product" data-date="2024-04-29" data-price="6.00" data-tag="piano
+            ebony
+            wood
+            jazz
+            art
+            music
+            classic
+            instrument
+            retro
+            musical
+            orchestra
+            keyboard
+            rhodes
+            full
+            old
+            antique
+            grunge
+            worn
+            used
+            wooden
+            furniture
+            other">
+                <a href="https://baeac.gumroad.com/l/wooden-piano">
+                    <img src="models/wooden-piano.jpg" alt="Old Wooden Piano 3D-Model">
+    
+                    <div class="buy">
+                        <button class="buy-button">€6.00</button>
+                        <h3>Old Wooden Piano</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product" data-date="2024-04-18" data-price="2.00" data-tag="wood
+            box
+            container
+            old
+            antique
+            storage
+            storage box
+            industrial
+            chest
+            wooden
+            crate
+            crates
+            rope
+            worn
+            used
+            realistic
+            exterior
+            other">
                 <a href="https://baeac.gumroad.com/l/wooden-storage-crate">
                     <img src="models/storage-crate.jpg" alt="Wooden Storage Crate 3D-Model">
     
@@ -155,60 +365,221 @@
                     </div>
                 </a>
             </div>
-
-            <div class="product">
-                <a href="https://baeac.gumroad.com/l/wooden-ammo-box">
-                    <img src="models/wooden-ammo-box.jpg" alt="Wooden Ammo Box 3D-Model">
+            
+            <div class="product" data-date="2024-04-10" data-price="8.00" data-tag="fashion
+            wear
+            head
+            jewelry
+            clothing
+            character
+            hat
+            character clothing
+            cap
+            clothes
+            realistic
+            dad hat
+            stitches
+            detailed
+            8k
+            textures
+            accessories">
+                <a href="https://baeac.gumroad.com/l/dad-hat">
+                    <img src="models/dad-hat.jpg" alt="Realistic Dad Hat 3D-Model">
     
                     <div class="buy">
-                        <button class="buy-button">€5.00</button>
-                        <h3>Wooden Ammo Box</h3>
+                        <button class="buy-button">€8.00</button>
+                        <h3>Realistic Dad Hat</h3>
                     </div>
                 </a>
             </div>
 
-            <div class="product">
-                <a href="https://baeac.gumroad.com/l/military-crate">
-                    <img src="models/military-crate.jpg" alt="Military Crate 3D-Model">
+            <div class="product" data-date="2024-03-27" data-price="0.00" data-tag="wood
+            wooden
+            box
+            storage
+            storage box
+            crate
+            free
+            model
+            realistic
+            grunge
+            old
+            worn
+            dirty
+            8k
+            container
+            shipping
+            game ready
+            game art
+            low poly
+            blender
+            exterior
+            other
+            free">
+                <a href="https://baeac.gumroad.com/l/wooden-crate">
+                    <img src="models/wooden-crate.jpg" alt="FREE Wooden Crates 3D-Model Collection">
     
                     <div class="buy">
-                        <button class="buy-button">€8.00</button>
+                        <button class="buy-button">FREE</button>
+                        <h3>Wooden Crates</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product" data-date="2024-04-04" data-price="4.00" data-tag="box
+            wooden
+            crate
+            ammo
+            container
+            wood
+            old
+            metal
+            storage
+            game
+            chest
+            other
+            military">
+                <a href="https://baeac.gumroad.com/l/wooden-ammo-box">
+                    <img src="models/wooden-ammo-box.jpg" alt="Realistic Wooden Ammo Box 3D-Model">
+    
+                    <div class="buy">
+                        <button class="buy-button">€4.00</button>
+                        <h3>Realistic Wooden Ammo Box</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product" data-date="2024-03-26" data-price="4.00" data-tag="box
+            case
+            loot
+            supply
+            military
+            game
+            games
+            old
+            weathered
+            metal
+            crate
+            cache
+            storage
+            travel
+            rust
+            realistic
+            game ready
+            other">
+                <a href="https://baeac.gumroad.com/l/military-crate">
+                    <img src="models/military-crate.jpg" alt="Military Supply Crate 3D-Model">
+    
+                    <div class="buy">
+                        <button class="buy-button">€4.00</button>
                         <h3>Military Supply Crate</h3>
                     </div>
                 </a>
             </div>
-    
-            <div class="product">
-                <a href="https://baeac.gumroad.com/l/pallets">
-                    <img src="models/pallets.jpg" alt="Pallets 3D-Model">
 
+            <div class="product" data-date="2024-03-01" data-price="5.00" data-tag="
+            wood
+            wooden
+            business
+            exterior
+            pallet
+            shipping
+            transport
+            storage
+            industrial
+            euro
+            plank
+            scrap
+            truck
+            logistics
+            epal
+            pallets
+            other">
+                <a href="https://baeac.gumroad.com/l/pallets">
+                    <img src="models/pallets.jpg" alt="Wooden Shipping Pallets 3D-Model Collection">
+    
                     <div class="buy">
-                        <button class="buy-button">€6.00</button>
+                        <button class="buy-button">€5.00</button>
                         <h3>Wooden Shipping Pallets</h3>
                     </div>
                 </a>
             </div>
 
-            <div class="product">
-                <a href="https://baeac.gumroad.com/l/dad-hat">
-                    <img src="models/dad-hat.jpg" alt="Realistic Dad Hat 3D-Model">
-    
-                    <div class="buy">
-                        <button class="buy-button">€12.00</button>
-                        <h3>Realistic Dad Hat</h3>
-                    </div>
-                </a>
-            </div>
         </div>
+
+        <script>
+            // Function to sort divs by date
+            function sortByDate(order) {
+                var container = document.querySelector('.group');
+                var products = Array.from(container.querySelectorAll('.product'));
+    
+                products.sort(function(a, b) {
+                    var dateA = new Date(a.dataset.date);
+                    var dateB = new Date(b.dataset.date);
+    
+                    if (order === 'dateAsc') {
+                        return dateA - dateB;
+                    } else {
+                        return dateB - dateA;
+                    }
+                });
+    
+                container.innerHTML = '';
+                products.forEach(function(product) {
+                    container.appendChild(product);
+                });
+            }
+    
+            // Function to sort divs by price
+            function sortByPrice(order) {
+                var container = document.querySelector('.group');
+                var products = Array.from(container.querySelectorAll('.product'));
+    
+                products.sort(function(a, b) {
+                    var priceA = parseFloat(a.dataset.price);
+                    var priceB = parseFloat(b.dataset.price);
+    
+                    if (a.dataset.free === 'true' && b.dataset.free === 'false') {
+                        return -1;
+                    } else if (a.dataset.free === 'false' && b.dataset.free === 'true') {
+                        return 1;
+                    } else {
+                        if (order === 'priceAsc') {
+                            return priceA - priceB;
+                        } else {
+                            return priceB - priceA;
+                        }
+                    }
+                });
+    
+                container.innerHTML = '';
+                products.forEach(function(product) {
+                    container.appendChild(product);
+                });
+            }
+    
+            // Event listener for dropdown change
+            document.getElementById('sortSelect').addEventListener('change', function() {
+                var selectedOption = this.value;
+                if (selectedOption.includes('date')) {
+                    sortByDate(selectedOption);
+                } else {
+                    sortByPrice(selectedOption);
+                }
+            });
+    
+            // Initial sorting by date (newest first)
+            sortByDate('dateDesc');
+        </script>
     </div>
 
-    <t id="renders">Renders</t>
+    <h1 id="renders">Renders</h1>
 
     <div class="page">
         <div class="container">
             <a href="https://youtu.be/zKF0IUzrF_E">
                 <img src="/renders/beetle.jpg" alt="Abandoned Beetle 3D-Render">
-                <h2>Abandoned Beetle, 2023</h2>
+                <h6>Abandoned Beetle, 2023</h6>
             </a>
         </div>
     </div>
@@ -216,7 +587,7 @@
         <div class="container">
             <a href="https://youtu.be/gqdsc5DdQPc">
                 <img src="/renders/classroom.jpg" alt="Last Day of School 3D-Render">
-                <h2>The Last Day of School, 2022</h2>
+                <h6>The Last Day of School, 2022</h6>
             </a>
         </div>
     </div>
@@ -224,7 +595,7 @@
         <div class="container">
             <a href="https://youtu.be/__gJ9VL9z-c">
                 <img src="/renders/plane.jpg" alt="Last Flight 3D-Render">
-                <h2>Last Flight, 2023</h2>
+                <h6>Last Flight, 2023</h6>
             </a>
         </div>
     </div>
@@ -232,7 +603,7 @@
         <div class="container">
             <a href="https://youtu.be/RGDR9DW_mQg">
                 <img src="/renders/canyon.jpg" alt="Canyons 3D-Render">
-                <h2>Canyons, 2023</h2>
+                <h6>Canyons, 2023</h6>
             </a>
         </div>
     </div>
@@ -240,7 +611,7 @@
         <div class="container">
             <a href="https://youtu.be/bApppAYJu-8">
                 <img src="/renders/old shack.jpg" alt="Old Shack 3D-Render">
-                <h2>Old Shack, 2024</h2>
+                <h6>Old Shack, 2024</h6>
             </a>
         </div>
     </div>
@@ -248,7 +619,7 @@
         <div class="container">
             <a href="https://youtu.be/53sibzKVaO8">
                 <img src="/renders/water.jpg" alt="Realistic Water Shader for Blender3D">
-                <h2>Water Shader, 2023</h2>
+                <h6>Water Shader, 2023</h6>
             </a>
         </div>
     </div>
@@ -256,7 +627,7 @@
         <div class="container">
             <a href="https://www.youtube.com/@baeac">
                 <img src="/renders/jj.jpg" alt="Kaizen's Jungle Jewels Submission entry 3D-Render">
-                <h2>Jungle Jewels, 2023</h2>
+                <h6>Jungle Jewels, 2023</h6>
             </a>
         </div>
     </div>
@@ -264,7 +635,7 @@
         <div class="container">
             <a href="https://www.youtube.com/@baeac">
                 <img src="/renders/dark-forest.jpg" alt="Dark Forest 3D-Render">
-                <h2>Dark Forest, 2024</h2>
+                <h6>Dark Forest, 2024</h6>
             </a>
         </div>
     </div>
@@ -301,7 +672,7 @@
         </div>
     </div>
 
-    <t id="add-ons">Add-Ons</t>
+    <h1 id="add-ons">Add-Ons</h1>
 
     <div class="page">
         <div class="container">

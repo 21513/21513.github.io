@@ -1,24 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website for Blender YouTuber baeac. Renders, free 3D-resources, (free) 3D-models and more">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-    <title>baeac | About</title>
+    <meta name="description" content="Use different transform orientations to move or rotate vertices in Blender.">
+    <meta name="date" content="2024-05-09">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+    <title>baeac</title>
 
     <div class="header">
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="./">Home</a>
-            <a href="./#models">Models</a>
-            <a href="./#renders">Renders</a>
-            <a href="./#add-ons">Add-ons</a>
-            <a href="./alphas">Alphas</a>
-            <a href="./texture-resizer">Programs</a>
-            <a href="./about">About</a>
+            <a href="../">Home</a>
+            <a href="../#models">Models</a>
+            <a href="../#renders">Renders</a>
+            <a href="../#add-ons">Add-ons</a>
+            <a href="../alphas">Alphas</a>
+            <a href="../texture-resizer">Programs</a>
+            <a href="../about">About</a>
         </div>
           
         <div id="main">
@@ -39,7 +42,7 @@
         
         <div class="icon">
             <a href="#" id="scrollToTop">
-                <img class="logo" src="logo.png" alt="">
+                <img class="logo" src="../logo.png" alt="baeac logo">
             </a>
         </div>
     </div>
@@ -103,36 +106,39 @@
         <button class="accept-button" onclick="acceptClick()">Accept</button>
     </div>
 
-    <div class="page">
-        <div class="text" style="width: 50vw;">
-            <h1>About me</h1>
-
-            <h6> </h6>
-            
-            <h6>I have been using Blender for about 5 years now and I am really passionate about anything 3D related.
-                I make videos on the internet showcasing how I approach certain challenges in making 3D art (mainly environment art).</h6>
-            
-            <h6> </h6>
-                
-            <h6>I love nature and animals and really let that show in my art, that's also where my focus is for the future.</h6>
-
-            <h6> </h6>
-                
-            <h6>I would love to make an animated series in a realistic style where I can just go crazy with the story.
-                I have had this dream for years so I guess it's my long term goal now.</h6>
-        </div>
+    <div class="banner">
     </div>
+
+    <h1> </h1>
+
+    <h1>How to rotate or move a face by normal direction in Blender</h1>
+    <h6>Posted May 9th 2024</h6>
+
     <div class="page">
         <div class="text">
-            <h1>Contact Information</h1>
-            <h6> </h6>
-            <h6>You can reach me via email for any business inquiries at:</h6>
-            <h6>baeacbusiness@gmail.com</h6>
-            <h6> </h6>
-            <h6>For anything else, please contact me on Discord or Instagram:</h6>
-            <h6>https://discord.gg/VhYy86gSAy</h6>
-            <h6>https://instagram.com/21513_</h6>
+            <h5>Sometimes when you're modelling in Blender you want to move a face or vertex a certain direction that follows the already existing mesh. The problem is is that your object is rotated a certain way so the global and local rotation are not right. To fix this we can use the normal transformation orientation. You can find and enable this in 3D viewport by going to the top of the viewport and clicking on 'Global' (This is the default transform orientation). Now you can choose 'Normal' to move or rotate along the normal axis.</h5>
+            <h5> </h5>
+            <img src="../images/transform-orient.jpg" alt="">
+            <h5>↓</h5>
+            <img src="../images/transform-orient-normal.jpg" alt="">
+            <h5> </h5>
+            <h5>To use this while modelling, you can click on a face that would normally be off axis and rotate it. When you try to rotate it normally nothing will happen. Instead, you want to click on the axis you want to rotate it along. So either X, Y, or Z. For the normal transform orientation the "forward" vector is Z. Think of this like the default plane, the normal direction is up, so the Z-axis.</h5>
+            <h5> </h5>
+            <h5>By default you are probably already using these transform orientations. When you want to move something along the X-axis when modelling normally you would press 'X' and it would move perfectly along the X-axis. When you press X twice it would move along a whole different axis. This is the local axis. In Blender you can toggle between local and whatever transform you have selected by pressing the axis twice.</h5>
+            <h5> </h5>
+            <h5>You can also play around and use all the other transform orientations in the same way, this is really useful in a lot of cases so definitely keep it in mind!</h5>
         </div>
+    </div>
+
+    <div class="questions">
+        <h2>Still have questions?</h2>
+        <h5>Email me at: baeacbusiness@gmail.com</h5>
+    </div>
+
+    <div class="patreon">
+        <a class="patreon-link" href="https://www.patreon.com/baeac">
+            <img src="../images/patreon.jpg" alt="">
+        </a>
     </div>
 
     <footer>
