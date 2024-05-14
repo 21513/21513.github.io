@@ -59,13 +59,11 @@ h6 {
 }
 
 h7 {
-    font-size: 50px;
     font-weight: bold;
     text-align: left;
 }
 
 h8 {
-    font-size: 25px;
     font-weight: normal;
     text-align: left;
 }
@@ -466,7 +464,7 @@ footer {
     }
 
     h8 {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .text {
@@ -492,11 +490,11 @@ footer {
     }
 
     h7 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     h8 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .text {
