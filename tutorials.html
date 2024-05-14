@@ -27,17 +27,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-    <title>baeac</title>
+    <title>baeac | Tutorials</title>
 
     <div class="header">
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="./">Home</a>
-            <a href="#models">Models</a>
-            <a href="#renders">Renders</a>
-            <a href="#add-ons">Add-ons</a>
             <a href="./alphas">Alphas</a>
-            <a href="./texture-resizer">Programs</a>
+            <a href="./tutorials">Tutorials</a>
+            <a href="./programs">Programs</a>
             <a href="./about">About</a>
         </div>
           
@@ -59,7 +57,7 @@
         
         <div class="icon">
             <a href="#" id="scrollToTop">
-                <img class="logo" src="./tutorials/logo.png" alt="baeac logo">
+                <img class="logo" src="./logo.png" alt="baeac logo">
             </a>
         </div>
     </div>
@@ -134,43 +132,11 @@
 
     <h1>Tutorials</h1>
 
-    <div class="sort-container">
-        <input class="search-input" type="text" id="searchInput" placeholder="Search models..." onkeypress="handleKeyPress(event)">
-        <button class="search-button" onclick="search()">&#x1F50E;&#xFE0E;</button>
-
-        <select id="sortSelect">
-            <option value="dateDesc">Newest first</option>
-            <option value="dateAsc">Oldest first</option>
-        </select>
-    </div>
-
-    <script>
-        function search() {
-            var searchInput = document.getElementById('searchInput').value.toLowerCase();
-            var posts = document.getElementsByClassName('post');
-    
-            for (var i = 0; i < posts.length; i++) {
-                var tags = posts[i].getAttribute('data-tag').toLowerCase();
-                if (tags.includes(searchInput)) {
-                    posts[i].style.display = 'block';
-                } else {
-                    posts[i].style.display = 'none';
-                }
-            }
-        }
-    
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                search();
-            }
-        }
-    </script>
-
     <div class="tutorials">
         <hr>
 
-        <div class="post" onclick="window.location.href = './tutorials/how-to-rotate-move-by-normal';" data-date="2024-05-09">
-            <img class="post-img" src="logo.png" alt="placeholder for tutorial thumbnail">
+        <div class="post" onclick="window.location.href = './tutorials/how-to-rotate-move-by-normal';" data-date="2024-05-09" data-tag="">
+            <img class="post-img" src="images/transform-orient-normal-icon.jpg" alt="How to rotate/move a face in the normal direction">
 
             <div class="post-info">
                 <div class="post-title">
@@ -185,43 +151,6 @@
         
         <hr>
     </div>
-
-    <script>
-        // Function to sort divs by date
-        function sortByDate(order) {
-            var container = document.querySelector('.tutorials');
-            var posts = Array.from(container.querySelectorAll('.post'));
-
-            posts.sort(function(a, b) {
-                var dateA = new Date(a.dataset.date);
-                var dateB = new Date(b.dataset.date);
-
-                if (order === 'dateAsc') {
-                    return dateA - dateB;
-                } else {
-                    return dateB - dateA;
-                }
-            });
-
-            container.innerHTML = '';
-            posts.forEach(function(post) {
-                container.appendChild(post);
-            });
-        }
-
-        // Event listener for dropdown change
-        document.getElementById('sortSelect').addEventListener('change', function() {
-            var selectedOption = this.value;
-            if (selectedOption.includes('date')) {
-                sortByDate(selectedOption);
-            } else {
-                sortByPrice(selectedOption);
-            }
-        });
-
-        // Initial sorting by date (newest first)
-        sortByDate('dateDesc');
-    </script>
 
     <footer>
         <div class="copyright">
