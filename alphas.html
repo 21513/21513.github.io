@@ -1,0 +1,282 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>baeac</title>
+    <meta name="description" content="Official website for Blender YouTuber baeac. 3D-models, renders, free alpha textures and more">
+    <meta name="keywords" content="baeac, blender, 3d, b3d">
+
+    <meta property="og:title" content="baeac">
+    <meta property="og:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta property="og:image" content="https://www.baeac.xyz/logo.png">
+    <meta property="og:url" content="https://www.baeac.xyz/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="baeac">
+    <meta name="twitter:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta name="twitter:image" content="https://www.baeac.xyz/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "headline": "baeac",
+          "image": "https://www.baeac.xyz/logo.png",
+          "url": "https://www.baeac.xyz/",
+          "logo": "https://www.baeac.xyz/logo.png",
+          "description": "Blender YouTuber sharing 3D renders, models, and tips.",
+          "sameAs": [
+            "https://www.youtube.com/@baeac",
+            "https://baeac.gumroad.com",
+            "https://www.patreon.com/baeac",
+            "https://www.cgtrader.com/baeac",
+            "https://www.instagram.com/21513_"
+          ]
+        }
+    </script>
+</head>
+
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q5J7XZ5FQQ');
+
+        // Check if the user has previously accepted
+        window.addEventListener('DOMContentLoaded', function() {
+            var hasAccepted = localStorage.getItem('hasAccepted');
+            if (hasAccepted === 'true') {
+                closePopup();
+            }
+        });
+    </script>
+
+    <script>
+        function denyClick() {
+            closePopup();
+        }
+
+        function acceptClick() {
+            // Call gtag with appropriate event parameters
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Accept Button Clicked'
+            });
+
+            // Store the user's acceptance in local storage
+            localStorage.setItem('hasAccepted', 'true');
+
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <div class="popup">
+        <p>This website uses cookies to enhance user experience and analyze website traffic.</p>
+        <button class="deny-button" onclick="denyClick()">Deny</button>
+        <button class="accept-button" onclick="acceptClick()">Accept</button>
+    </div>
+    
+    <div class="topbar">
+        <a href="#" onclick="scrollToTop()">
+            <img src="topbar.png" alt="">
+        </a>
+
+        <div id="navSidebar" class="nav">
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            <a href="./">Home</a>
+            <a href="./renders">Renders</a>
+            <a href="./products">Products</a>
+            <a href="./alphas">Alphas</a>
+            <a href="./about">About</a>
+        </div>
+        <span class="open-button" onclick="openNav()">&#9776;</span>
+        <script src="script.js"></script>
+    </div>
+
+    <div class="title">
+        <h1>baeac</h1>
+    </div>
+    <hr>
+
+    <div class="title">
+        <h1>Alphas</h1>
+    </div>
+
+    <div class="search-bar">
+        <input class="search-input" type="text" id="searchInput" placeholder="Search textures..." onkeypress="handleKeyPress(event)">
+        <button class="search-button" onclick="search()">&#x1F50E;&#xFE0E;</button>
+    </div>
+
+    <div class="page">
+        <div class="group" id="assetContainer">
+
+        </div>
+    </div>
+
+    <script>
+        const fileNames = [
+            "7.62mmAmmo1.png",
+            "7.62mmAmmo2.png",
+            "7.62mmAmmo3.png",
+            "7.62mmAmmo4.png",
+            "7.62mmAmmo5.png",
+            "7.62mmAmmo6.png",
+            "Arrow1.png",
+            "Arrow2.png",
+            "Arrow3.png",
+            "Arrow4.png",
+            "Arrow5.png",
+            "BlockB.png",
+            "Brush1.png",
+            "Brush2.png",
+            "Brush3.png",
+            "Brush4.png",
+            "Brush5.png",
+            "Check1.png",
+            "Circle1.png",
+            "Circle2.png",
+            "Circle3.png",
+            "Circle4.png",
+            "Circle5.png",
+            "Circle6.png",
+            "Cracks1.png",
+            "Cracks2.png",
+            "Cross1.png",
+            "Cross2.png",
+            "Fingerprint1.png",
+            "Fingerprint2.png",
+            "Fingerprint3.png",
+            "Fingerprint4.png",
+            "GVSignature.png",
+            "GeneralWaste1.png",
+            "GeneralWaste2.png",
+            "Graffiti1.png",
+            "Graffiti10.png",
+            "Graffiti11.png",
+            "Graffiti12.png",
+            "Graffiti2.png",
+            "Graffiti3.png",
+            "Graffiti4.png",
+            "Graffiti5.png",
+            "Graffiti6.png",
+            "Graffiti7.png",
+            "Graffiti8.png",
+            "Graffiti9.png",
+            "Grunge1.png",
+            "Grunge2.png",
+            "Grunge3.png",
+            "Grunge4.png",
+            "Grunge5.png",
+            "Grunge6.png",
+            "Grunge7.png",
+            "Grunge8.png",
+            "Honey.png",
+            "Label1.png",
+            "Label10.png",
+            "Label11.png",
+            "Label12.png",
+            "Label13.png",
+            "Label14.png",
+            "Label15.png",
+            "Label2.png",
+            "Label3.png",
+            "Label4.png",
+            "Label5.png",
+            "Label6.png",
+            "Label7.png",
+            "Label8.png",
+            "Label9.png",
+            "Log1.png",
+            "Log2.png",
+            "Log3.png",
+            "Logo1.png",
+            "Logo2.png",
+            "NetWeight1.png",
+            "Price1.png",
+            "Price2.png",
+            "PublicPhone1.png",
+            "QRCode.png",
+            "RandomNumbers1.png",
+            "RandomNumbers2.png",
+            "RandomNumbers3.png",
+            "RandomNumbers4.png",
+            "RandomNumbers5.png",
+            "RandomNumbers6.png",
+            "SIgn2.png",
+            "Sign1.png",
+            "Sign10.png",
+            "Sign11.png",
+            "Sign12.png",
+            "Sign13.png",
+            "Sign14.png",
+            "Sign15.png",
+            "Sign16.png",
+            "Sign3.png",
+            "Sign4.png",
+            "Sign5.png",
+            "Sign6.png",
+            "Sign7.png",
+            "Sign8.png",
+            "Sign9.png",
+            "Square1.png",
+            "Square2.png",
+            "Square3.png",
+            "TrashCan1.png",
+            "Warning1.png",
+            "Waste.png",
+            "Welcome1.png",
+        ];
+
+        function createAssetLink(fileName) {
+            const div = document.createElement("div");
+            div.classList.add("alpha");
+            const a = document.createElement("a");
+            a.href = "assets/" + fileName;
+            a.download = "";
+            const img = document.createElement("img");
+            img.src = "assets/" + fileName;
+            img.alt = fileName;
+            a.appendChild(img);
+            div.appendChild(a);
+            return div;
+        }
+
+        const assetContainer = document.getElementById("assetContainer");
+        fileNames.forEach(fileName => {
+            assetContainer.appendChild(createAssetLink(fileName));
+        });
+    </script>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2024 baeac. All rights reserved.
+        </div>
+        <div class="footer-content">
+            <div class="links">
+                <a href="https://www.youtube.com/@baeac">YouTube</a>
+                <a href="https://baeac.gumroad.com">Gumroad</a>
+                <a href="https://www.patreon.com/baeac">Patreon</a>
+                <a href="https://www.cgtrader.com/baeac">CGTrader</a>
+            </div>
+            <div class="info">
+                <a class="email" href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+                <a href="./cookies">Cookies</a>
+                <a href="./about">About</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

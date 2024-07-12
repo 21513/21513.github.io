@@ -1,0 +1,282 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>baeac</title>
+    <meta name="description" content="Official website for Blender YouTuber baeac. 3D-models, renders, free alpha textures and more">
+    <meta name="keywords" content="baeac, blender, 3d, b3d">
+
+    <meta property="og:title" content="baeac">
+    <meta property="og:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta property="og:image" content="https://www.baeac.xyz/logo.png">
+    <meta property="og:url" content="https://www.baeac.xyz/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="baeac">
+    <meta name="twitter:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta name="twitter:image" content="https://www.baeac.xyz/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "headline": "baeac",
+          "image": "https://www.baeac.xyz/logo.png",
+          "url": "https://www.baeac.xyz/",
+          "logo": "https://www.baeac.xyz/logo.png",
+          "description": "Blender YouTuber sharing 3D renders, models, and tips.",
+          "sameAs": [
+            "https://www.youtube.com/@baeac",
+            "https://baeac.gumroad.com",
+            "https://www.patreon.com/baeac",
+            "https://www.cgtrader.com/baeac",
+            "https://www.instagram.com/21513_"
+          ]
+        }
+    </script>
+</head>
+
+<body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q5J7XZ5FQQ');
+
+        // Check if the user has previously accepted
+        window.addEventListener('DOMContentLoaded', function() {
+            var hasAccepted = localStorage.getItem('hasAccepted');
+            if (hasAccepted === 'true') {
+                closePopup();
+            }
+        });
+    </script>
+
+    <script>
+        function denyClick() {
+            closePopup();
+        }
+
+        function acceptClick() {
+            // Call gtag with appropriate event parameters
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Accept Button Clicked'
+            });
+
+            // Store the user's acceptance in local storage
+            localStorage.setItem('hasAccepted', 'true');
+
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <div class="popup">
+        <p>This website uses cookies to enhance user experience and analyze website traffic.</p>
+        <button class="deny-button" onclick="denyClick()">Deny</button>
+        <button class="accept-button" onclick="acceptClick()">Accept</button>
+    </div>
+
+    <div class="topbar">
+        <a href="#" onclick="scrollToTop()">
+            <img src="topbar.png" alt="">
+        </a>
+
+        <div id="navSidebar" class="nav">
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            <a href="./">Home</a>
+            <a href="./renders">Renders</a>
+            <a href="./products">Products</a>
+            <a href="./alphas">Alphas</a>
+            <a href="./about">About</a>
+        </div>
+        <span class="open-button" onclick="openNav()">&#9776;</span>
+        <script src="script.js"></script>
+    </div>
+
+    <div class="title">
+        <h1>baeac</h1>
+    </div>
+    <hr>
+
+    <div class="title">
+        <h1>Renders</h1>
+    </div>
+
+    <div class="post">
+        <div class="post-container">
+            <a href="https://youtu.be/v2uWpqNUtXE">
+                <img src="renders/OvergrownBuilding.jpg" alt="Logo">
+            </a>
+
+            <div class="caption">
+                <div class="post-title">
+                    <h2>Overgrown Abandoned Building</h2>
+                </div>
+
+                <div class="post-desc">
+                    <h4>Blender, Davinci Resolve, Krita</h4>
+                </div>
+
+                <div class="post-date">
+                    <h5>June 21st, 2024</h5>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-container">
+            <a href="https://youtu.be/7DXfkCXwhPc">
+                <img src="renders/Crocodile.jpg" alt="Logo">
+            </a>
+
+            <div class="caption">
+                <div class="post-title">
+                    <h2>Flooded Forest</h2>
+                </div>
+
+                <div class="post-desc">
+                    <h4>Blender, Davinci Resolve</h4>
+                </div>
+
+                <div class="post-date">
+                    <h5>July 10th, 2024</h5>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-container">
+            <a href="https://youtu.be/7DXfkCXwhPc">
+                <img src="renders/Mule.jpg" alt="Logo">
+            </a>
+
+            <div class="caption">
+                <div class="post-title">
+                    <h2>Mule in the forest</h2>
+                </div>
+
+                <div class="post-desc">
+                    <h4>Blender, Davinci Resolve</h4>
+                </div>
+
+                <div class="post-date">
+                    <h5>June 28th, 2024</h5>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Products</h1>
+    </div>
+
+    <div class="product-page">
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/ben-day-dots', '_blank');">
+            <div class="product-container">
+                <img src="products/spider-verse.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>Spider-Verse Shader for Blender 4.1</h2>
+                </div>
+
+                <button>$2.00</button>
+            </div>
+        </div>
+
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/water-shader', '_blank');">
+            <div class="product-container">
+                <img src="products/water-shader.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>Realistic Procedural Water Shader for Blender</h2>
+                </div>
+
+                <button>$2.00</button>
+            </div>
+        </div>
+
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/mud', '_blank');">
+            <div class="product-container">
+                <img src="products/mud-shader.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>Realistic Procedural Mud Shader for Blender</h2>
+                </div>
+
+                <button>$1.00</button>
+            </div>
+        </div>
+
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/halftone-shader', '_blank');">
+            <div class="product-container">
+                <img src="products/halftone-shader.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>FREE Halftone Shader for Blender 4.1</h2>
+                </div>
+
+                <button>FREE</button>
+            </div>
+        </div>
+
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/hatching-shader', '_blank');">
+            <div class="product-container">
+                <img src="products/hatching-shader.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>FREE Hatching Shader for Blender 4.1</h2>
+                </div>
+
+                <button>FREE</button>
+            </div>
+        </div>
+
+        <div class="product" onclick="window.open('https://baeac.gumroad.com/l/ps1-ify', '_blank');">
+            <div class="product-container">
+                <img src="products/ps1-ify.jpg" alt="">
+
+                <div class="product-info">
+                    <h2>PS1-ify Blender Add-on v1.3</h2>
+                </div>
+
+                <button>FREE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="copyright">
+            &copy; 2024 baeac. All rights reserved.
+        </div>
+        <div class="footer-content">
+            <div class="links">
+                <a href="https://www.youtube.com/@baeac">YouTube</a>
+                <a href="https://baeac.gumroad.com">Gumroad</a>
+                <a href="https://www.patreon.com/baeac">Patreon</a>
+                <a href="https://www.cgtrader.com/baeac">CGTrader</a>
+            </div>
+            <div class="info">
+                <a class="email" href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+                <a href="./cookies">Cookies</a>
+                <a href="./about">About</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
