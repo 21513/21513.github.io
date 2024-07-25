@@ -1,20 +1,45 @@
+.dark-mode {
+    --background-color: #010101;
+    --foreground-color: #0e0e0e;
+    --text-color: #ffffff;
+}
+
+.light-mode {
+    --background-color: #ffffff;
+    --foreground-color: #eeeeee;
+    --text-color: #010101;
+}
+
 * {
     margin: 0px;
     font-family: system-ui, 'Segoe UI';
     font-weight: 500;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 body {
-    background-color: #0e0e0e;
+    background-color: var(--background-color);
+    transition: 0.3s;
+}
+
+.icon {
+    fill: var(--text-color);
 }
 
 img {
     object-fit: contain;
 }
 
+video {
+    object-fit: contain;
+}
+
 h1 {
     font-weight: bold;
+}
+
+h4 {
+    font-weight: 400;
 }
 
 h5 {
@@ -29,7 +54,7 @@ a {
 }
 
 hr {
-    margin: 16px auto;
+    margin: 128px 0px;
     border-style: hidden;
 }
 
@@ -39,40 +64,41 @@ hr {
     left: 0;
     position: fixed;
     z-index: 1;
-    background-color: #010101;
+    background-color: var(--background-color);
     overflow-x: hidden;
     transition: 0.4s;
     padding-top: 48px;
+    transition: 0.3s;
 }
 
 .nav a {
     padding: 8px 8px 8px 32px;
     display: block;
-    background-color: #010101;
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 .nav a:hover {
     color: #dddddd;
 }
 
+.toggle-topbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .close-button {
     position: absolute;
     top: 0;
     right: 12;
-    font-size: 36px;
 }
 
 .open-button {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 32px;
-    margin-left: 12px;
-    margin-top: 4px;
-    font-weight: bold;
-
     cursor: pointer;
-    color: white;
     border: none;
 }
 
@@ -83,13 +109,15 @@ hr {
     top: 0;
     position: fixed;
     z-index: 1;
-    background-color: #010101;
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 .topbar img {
     height: 42px;
     padding: 8px;
-    background-color: #010101;
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 .page {
@@ -100,7 +128,7 @@ hr {
 
 .text {
     padding: 8px;
-    background-color: #0e0e0e;
+    transition: 0.3s;
 }
 
 .post {
@@ -114,7 +142,8 @@ hr {
     margin: 16px;
     padding: 8px;
     border-radius: 10px;
-    background-color: #181818;
+    background-color: var(--foreground-color);
+    transition: 0.3s;
 }
 
 .post img {
@@ -142,6 +171,7 @@ hr {
 }
 
 .title {
+    margin: 64px 0px;
     padding: 4px;
     display: flex;
     justify-content: center;
@@ -156,47 +186,52 @@ hr {
     max-width: 20%;
     bottom: 20px;
     right: 20px;
-    background-color: #010101;
+    background-color: var(--background-color);
     padding: 10px;
     border-radius: 10px;
     text-align: right;
     z-index: 999;
+    transition: 0.3s;
 }
 
 .deny-button {
     font-size: large;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--text-color);
     margin: 4px;
     margin-left: 8px;
     padding: 8px;
-    background-color: #010101;
-    border-radius: 16px;
+    background-color: var(--background-color);
+    border-radius: 2rem;
     border-style: none;
+    transition: 0.3s;
 }
 
 .deny-button:hover {
     cursor: pointer;
-    color: #010101;
-    background-color: #ffffff;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    transition: 0.3s;
 }
 
 .accept-button {
     font-size: large;
     font-weight: bold;
-    color: #010101;
+    color: var(--background-color);
     margin: 4px;
     margin-left: 8px;
     padding: 8px;
-    background-color: #ffffff;
-    border-radius: 16px;
+    background-color: var(--text-color);
+    border-radius: 2rem;
     border-style: none;
+    transition: 0.3s;
 }
 
 .accept-button:hover {
     cursor: pointer;
-    color: #ffffff;
-    background-color: #010101;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 /*ALPHAS ALPHAS ALPHAS*/
@@ -242,8 +277,9 @@ hr {
     padding: 16px;
     border-radius: 24px;
     border-style: none;
-    background-color: #010101;
-    color: #ffffff;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    transition: 0.3s;
 }
 
 .search-button {
@@ -251,14 +287,16 @@ hr {
     width: 50px;
     border-radius: 24px;
     border-style: none;
-    color: #ffffff;
-    background-color: #010101;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    transition: 0.3s;
 }
 
 .search-button:hover {
     cursor: pointer;
-    color: #010101;
-    background-color: #ffffff;
+    color: var(--text-color);
+    background-color: var(--foreground-color);
+    transition: 0.3s;
 }
 
 /*PRODUCTS PRODUCTS PRODUCTS*/
@@ -282,14 +320,15 @@ hr {
 .product:hover {
     cursor: pointer;
     scale: 1.01;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 
 .product-container {
     margin: 4px;
     padding: 16px;
     border-radius: 12px;
-    background-color: #181818;
+    background-color: var(--foreground-color);
+    transition: 0.3s;
 }
 
 .product img {
@@ -300,23 +339,93 @@ hr {
 .product button {
     font-size: large;
     font-weight: bold;
-    color: #010101;
+    color: var(--background-color);
     margin: 4px;
     margin-left: 8px;
     padding: 8px 16px;
-    background-color: #ffffff;
+    background-color: var(--text-color);
     border-radius: 2rem;
     border-style: none;
+    transition: 0.3s;
 }
 
 .product button:hover {
     cursor: pointer;
-    color: #ffffff;
-    background-color: #010101;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 .product-info {
     margin: 8px 16px;
+}
+
+/*BUTTONS BUTTONS BUTTONS*/
+/*BUTTONS BUTTONS BUTTONS*/
+/*BUTTONS BUTTONS BUTTONS*/
+
+.wide-button {
+    margin: 64px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.wide-button button {
+    width: 50vw;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 2rem;
+    border-style: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    transition: 0.3s;
+}
+
+.wide-button button:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scale: 1.01;
+    transition: 0.3s;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle button {
+    margin: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 2rem;
+    border-style: none;
+    transition: 0.3s;
+}
+
+.toggle button:hover {
+    cursor: pointer;
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+
+.material-icons {
+    color: var(--text-color);
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.toggle button:hover .material-icons {
+    color: var(--background-color);
+    transition: 0.3s;
+}
+
+.material-symbols-rounded {
+    color: var(--text-color);
+    scale: 1.6;
+    margin: 20px 16px;
+    transition: 0.3s;
 }
 
 /*FOOTER FOOTER FOOTER*/
@@ -329,8 +438,9 @@ footer {
     padding: 32px 0px;
     bottom: 0;
     text-align: center;
-    color: #ffffff;
-    background-color: #010101;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: 0.3s;
 }
 
 footer a {
@@ -359,10 +469,16 @@ footer a {
 
 .email {
     padding: 10px;
-    background-color: #ffffff;
-    color: #010101;
+    background-color: var(--text-color);
+    color: var(--background-color);
     border-radius: 25px;
     margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.email:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /*DESKTOP DESKTOP DESKTOP*/
@@ -375,6 +491,11 @@ footer a {
     }
 
     .post img {
+        max-width: 45vw;
+        height: auto;
+    }
+
+    .post video {
         max-width: 45vw;
         height: auto;
     }
@@ -414,6 +535,11 @@ footer a {
     }
 
     .post img {
+        max-width: 80vw;
+        height: auto;
+    }
+
+    .post video {
         max-width: 80vw;
         height: auto;
     }
