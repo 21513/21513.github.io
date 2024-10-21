@@ -525,6 +525,10 @@ footer a {
         font-size: 128px;
     }
 
+    h3 {
+        font-size: 32px;
+    }
+
     .post {
         width: 35vw;
     }
@@ -553,6 +557,10 @@ footer a {
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 96px;
+    }
+
+    h3 {
+        font-size: 32px;
     }
 
     .post {
