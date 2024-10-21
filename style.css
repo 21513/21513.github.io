@@ -524,16 +524,16 @@ footer a {
         font-size: 128px;
     }
 
-    .articles h3 {
-        font-size: 32px;
-    }
-
     .post {
         width: 35vw;
     }
 
     .articles {
         width: 35vw;
+    }
+
+    .articles h3 {
+        font-size: 32px;
     }
 
     .thumbnail {
@@ -568,6 +568,10 @@ footer a {
 
     .articles {
         width: 75vw;
+    }
+
+    .articles h3 {
+        font-size: 24px;
     }
 
     .thumbnail {
