@@ -617,6 +617,10 @@ footer a {
         width: 35vw;
     }
 
+    .articles h3 {
+        font-size: 32px;
+    }
+
     .paragraph img {
         width: 35vw;
     }
@@ -650,7 +654,11 @@ footer a {
     }
 
     .articles {
-        width: 75vw;
+        width: 80vw;
+    }
+
+    .articles h3 {
+        font-size: 24px;
     }
 
     .paragraph img {
