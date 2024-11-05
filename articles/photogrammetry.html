@@ -1,0 +1,363 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>baeac</title>
+    <meta name="description" content="Official website for Blender YouTuber baeac. 3D-models, renders, free alpha textures and more">
+    <meta name="keywords" content="baeac, blender, 3d, b3d">
+
+    <meta property="og:title" content="baeac">
+    <meta property="og:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta property="og:image" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+    <meta property="og:url" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="baeac">
+    <meta name="twitter:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta name="twitter:image" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "headline": "baeac",
+          "image": "https://www.baeac.xyz/renders/OvergrownBuilding.jpg",
+          "url": "https://www.baeac.xyz/",
+          "logo": "https://www.baeac.xyz/logo.png",
+          "description": "Blender YouTuber sharing 3D renders, models, and tips.",
+          "sameAs": [
+            "https://www.youtube.com/@baeac",
+            "https://baeac.gumroad.com",
+            "https://www.patreon.com/baeac",
+            "https://www.cgtrader.com/baeac",
+            "https://www.instagram.com/21513_"
+          ]
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q5J7XZ5FQQ');
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var hasAccepted = localStorage.getItem('hasAccepted');
+            if (hasAccepted === 'true') {
+                closePopup();
+            }
+        });
+    </script>
+
+    <script>
+        function denyClick() {
+            closePopup();
+        }
+
+        function acceptClick() {
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Accept Button Clicked'
+            });
+
+            localStorage.setItem('hasAccepted', 'true');
+
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <div class="popup">
+        <p>This website uses cookies to enhance user experience and analyze website traffic.</p>
+        <button class="deny-button" onclick="denyClick()">Deny</button>
+        <button class="accept-button" onclick="acceptClick()">Accept</button>
+    </div>
+
+    <div class="topbar">
+        <a href="#" onclick="scrollToTop()">
+            <svg class="icon" width="64" height="64" viewBox="0 0 176.10153 67.620079">
+                    <path
+                    d="m 57.374577,58.8336 v -8.78562 l 17.809042,-0.003 17.80904,-0.003 1.878907,-1.07764 c 3.332901,-1.91156 3.561431,-2.59666 3.842301,-11.51883 0.16592,-5.27042 0.42759,-8.35763 0.83604,-9.86347 2.216153,-8.17032 8.915243,-15.42954 16.457513,-17.83356 4.9045,-1.56326 13.60152,-1.47832 18.60929,0.18174 5.92932,1.96556 12.33575,8.06213 14.47216,13.77218 1.62525,4.34389 1.87743,5.95005 2.0716,13.19514 0.21228,7.91914 0.5614,9.32076 2.78953,11.19971 2.2053,1.85966 2.80937,1.95159 12.82428,1.95159 h 9.32725 v 8.76752 8.76753 h -9.46603 c -11.02069,0 -13.68247,-0.36744 -18.11517,-2.5007 -6.85382,-3.29844 -11.30454,-8.47627 -13.70809,-15.94764 -0.69802,-2.16985 -0.85733,-3.69156 -1.05172,-10.04613 -0.18947,-6.19382 -0.34438,-7.72269 -0.89585,-8.84065 -2.22001,-4.50057 -9.45415,-5.78103 -13.55649,-2.39952 -2.37539,1.95799 -2.52372,2.5472 -2.78367,11.05752 -0.21459,7.02517 -0.31754,7.91783 -1.22187,10.59409 -1.48188,4.38548 -3.29383,7.34471 -6.38996,10.43591 -3.08409,3.07918 -6.28392,5.04977 -10.562093,6.50458 l -2.800733,0.9524 -19.087637,0.11316 -19.087639,0.11317 z"
+                    id="path1"/>
+                    
+                    <path
+                    d="m 155.36997,34.072 -1.55258,-0.13983 v -1.54616 c 0,-4.12921 2.30693,-9.41388 5.66164,-12.96948 3.7471,-3.97154 8.86438,-6.47989 13.69999,-6.71536 l 2.00922,-0.0978 0.10221,4.43198 0.10223,4.43197 -1.74614,0.24636 c -2.56551,0.36197 -5.26823,1.80327 -7.14611,3.81088 -2.12918,2.27625 -3.19635,4.39594 -3.44987,6.85236 l -0.20254,1.96261 -2.96275,-0.0638 c -1.62949,-0.0351 -3.66139,-0.12675 -4.5153,-0.20367 z"
+                    id="path2"/>
+                    
+                    <path
+                    d="M 19.942895,66.97827 C 12.784561,65.44432 5.7829899,60.02082 2.6482224,53.58161 0.0461512,48.23663 0.2137224,50.19381 0.1014968,23.83672 L 0,0 h 8.5950375 8.5950385 v 21.46459 c 0,12.8791 0.142748,21.96233 0.356886,22.70898 0.603472,2.10419 2.156373,3.96059 4.139906,4.94903 4.059267,2.02282 8.92393,0.70864 11.103729,-2.99964 1.00075,-1.70247 1.025597,-1.88401 1.237838,-9.04362 0.154964,-5.22746 0.398346,-7.98189 0.855405,-9.68081 0.995982,-3.70215 3.237971,-7.97443 5.506726,-10.49349 2.428581,-2.69652 7.164519,-5.92939 10.225709,-6.98031 3.267024,-1.1216 8.631105,-1.60684 12.695256,-1.14844 4.455919,0.5026 5.763885,0.87723 9.099317,2.60627 4.0853,2.11777 8.916544,7.17308 10.94205,11.44955 1.916575,4.04647 2.516145,7.32477 2.516145,13.7577 v 5.78658 H 77.14133 68.413621 l -0.164328,-5.38838 c -0.184999,-6.06615 -0.593828,-7.49403 -2.579288,-9.00841 -3.611226,-2.75442 -7.878418,-2.74436 -11.512023,0.0271 -2.198693,1.67703 -2.610289,3.18401 -2.627638,9.62059 -0.01865,6.92001 -0.405659,9.77296 -1.824993,13.45342 -2.4004,6.22444 -6.477584,10.67823 -12.605681,13.77004 -5.209717,2.62847 -11.296613,3.38326 -17.156776,2.1275 z"
+                    id="path3"/>
+            </svg>
+        </a>
+
+        <div id="navSidebar" class="nav">
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            <a href="../">Home</a>
+            <a href="../artworks">Artworks</a>
+            <a href="../store">Store</a>
+            <a href="../articles">Articles</a>
+            <a href="../textures">Textures</a>
+            <a href="../about">About</a>
+        </div>
+        
+        <div class="open-button" onclick="openNav()">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+
+        <script src="../script.js"></script>
+
+        <div class="toggle-topbar">
+            <div class="toggle">
+                <button id="theme-toggle">
+                    <span class="material-icons">
+                        light_mode
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</head>
+
+<body class="dark-mode">
+    <div class="title">
+        <h1>PHOTOGRAMMETRY</h1>   
+    </div>
+
+    <h5>October 8th 2024</h5>
+
+    <h3>What is photogrammetry?</h3>
+
+    <div class="paragraph">
+        <h5>
+            Photogrammetry is a technique used to create 3D meshes from photographs.
+
+            It's essentially recreating a real-life object into a mesh that you can use in 3D-software.
+            Using various algorithms and photographs from different angles of an object, the computer can analyze and figure out where certain points are in 3D-space.
+            This results in a point cloud, which contains all the points the algorithm could figure out.
+            After this is finished, another algorithm is applied which turns the point cloud into a 3D-mesh that is usable by all popular 3D-software.
+            It's very simply put just a 'connect the dots' puzzle for the computer but now in 3D.<br>
+            <br>
+            There are also other methods that give similar results such as LiDAR scanning. These methods don't rely on images but rather on sensors.<br>
+
+            <img src="../images/photogrammetry-duck1.jpg" alt=""> 
+
+            Scanned using KIRI Engine PRO. ~200 photos, auto object masking, ultra detail, 4k textures.<br>
+            <br>
+        </h5>
+    </div>
+
+    <h3>What apps to use?</h3>
+
+    <div class="paragraph">
+        <h5>
+            Choosing the right photogrammetry app for you is important for getting the best result.
+            Mostly these apps do pretty much the same thing, but some of them have additional features that you might want to consider.
+            These features include things like 3D gaussian splatting, AI-powered tools, object masking, etc.
+            In this chapter we will be comparing apps and programs so you can make an educated decision in which app you will use.
+        </h5>
+    </div>
+
+    <div class="paragraph">
+        <h4>KIRI Engine</h4>
+        <h5>
+            KIRI Engine is a photogrammetry app available for iOS and Android and is in my experience the best app for 3D-scanning on your phone.
+            It offers great features like 3D gaussian splatting, auto object masking, texture smoothing, etc.
+            It also allows you to upload images or videos from your local storage which is a feature I seem to be missing on a lot of other apps.<br>
+            
+            <img src="../images/photogrammetry-elephant.jpg" alt="">
+
+            Scanned using KIRI Engine PRO. ~250 photos, auto object masking, ultra detail, 4k textures.<br>
+            <br>
+
+            In the free version of the app you get unlimited projects, up to 100 photos, three free exports per week, and more.
+            So you can scan whenever and whatever you want, you just can't export it immediately which is honestly one of the best free models I have seen in photogrammetry apps.
+            You can always just preview your scans and see if you like them or not and they will be saved for you to export another week.<br>
+            <br>
+            In the paid version, which is either $17.99 per month or $79.99 per year, you get up to 300 photos per project, upload local images/videos, unlimited exports, priority queue, and more.
+            As you can tell, the paid version offers a lot even with the great free version.
+            You would have to decide for yourself if the paid version would be worth it.<br>
+            <br>
+            <a href="https://www.kiriengine.app/" class="link">Find out more on the official KIRI Engine website</a>
+        </h5>
+    </div>
+
+
+    <div class="paragraph">
+        <h4>Meshroom</h4>
+        <h5>
+            Meshroom is a free alternative to many paid apps and instead uses your computer hardware to create the mesh and textures.
+            The program requires an NVIDIA GPU for dense, high quality mesh generation somake sure to look at the system requirements on the Meshroom website.
+            The recommended amount of RAM is 32GB, just so everything goes a lot quicker but you will be able to run it with less.
+            The interface is quite intimidating but once you know what buttons to press, you shouldn't have to worry about it to much.
+            Once you get it up and running it might take a while before your mesh is complete depending on your PC specs.<br>
+            
+            <img src="../images/photogrammetry-galiamelon.jpg" alt="">
+
+            The best thing about computing the mesh locally is that you can have an unlimited amount of input images so you can get a lot more detail, or create a bigger object.
+            Using more input images will, of course, make the computing time take longer but that might not be a dealbreaker for you.
+            Make sure to try it out with a couple images first and see how you like it before throwing a lot of images at it.<br>
+            
+            <img src="../images/photogrammetry-watermelon.jpg" alt="">
+
+            Something else you need to take into account when processing photogrammetry locally is that you do not get any of the post processing benefits from any of the paid apps.
+            Meshroom does exactly what it needs to do, and that is create a model with textures from a series of images.
+            Different platforms might do some image processing, AI enhancing, masking, etc. so you would have to do that manually in Meshroom.
+            This does mean that you get full control of the post-processing step.<br>
+            <br>
+            <a href="https://alicevision.org/#meshroom" class="link">Find out more on the official Meshroom website</a>
+        </h5>
+    </div>
+
+    
+    <div class="paragraph">
+        <h4>Polycam</h4>
+        <h5>
+            Polycam is a photogrammetry app available for iOS and Android it has great features like gaussian splatting,
+            LiDAR scanning,
+            photogrammetry,
+            360 image capture,
+            and more.
+            It also allows you to upload images or videos from your local storage.<br>
+            
+            <img src="../images/photogrammetry-rock.jpg" alt="">
+
+            Scanned using Polycam Free at ~100 photos<br>
+            <br>
+
+            The free version allows you to create 5 free photogrammetry captures.
+            You can upload up to 100 images for photogrammetry or gaussian splat captures or videos up to two minutes.
+            The export formats are limited to only glTF in the free version and you can export the same model however many times you want.<br>
+            <br>
+            In the paid version of the app, Polycam Pro, you get access to 12+ export formats including .pdf for some reason...
+            You can get 2D floor plans generated from a 3D room scan.
+            You can create extra large photogrammetry captures and gaussian splats which means up to 2000 images for photogrammetry,
+            and 1000 images for gaussian splatting.
+            This will make gaussian splats so much more powerful, but if you're on an iPhone because gaussian splatting is disabled on Android for whatever reason.
+            If you go on the web version of Polycam with the Pro subscription, you can upload even longer videos for captures.
+            30 minutes for photogrammetry or 15 minutes for gaussian splatting.<br>
+            <br>
+            Polycam Pro will set you back $26.99 per month or $149.99 per year.<br>
+            <br>
+            <a href="https://poly.cam/" class="link">Find out more on the official Polycam website</a>
+        </h5>
+    </div>
+
+    <div class="paragraph">
+        <h4>RealityScan</h4>
+        <h5>
+            RealityScan is a completely free photogrammetry app you can download on iOS or Android.
+            It is a pretty good app for beginners since it's free and the app has AR guidance so you will know from which angles you need more photos of.
+            It is owned by Epic Games which makes it perfectly integrated into their ecosystem.
+            The only downside to this is that your scans will be uploaded to your Sketchfab account,
+            this is the only way to export your models from the app.
+            This doesn't seem like a big deal untill you figure out that you can only upload ten models per month to Sketchfab.
+            So, the app 'technically' doesn't have a limit and you can export however many times you want,
+            you will still be limited by Sketchfab with how many models you can scan per month.
+            You can always get a Sketchfab Pro subscription, which will get you up to 50 exports per month for $24 per month or $180 per year.
+            Or you can upgrade to Sketchfab Premium for 200 exports per month for the low, low price of $129 per month or $948 yearly.<br>
+            <br>
+            So, if you're going to be staying below ten photoscans per month, this app sounds really great.
+            Once you go outside those ten models this app becomes the most expensive one.<br>
+            <br>
+            <a href="https://www.unrealengine.com/en-US/realityscan" class="link">Find out more on the official Unreal Engine website</a>
+        </h5>
+    </div>
+
+
+    <h3>What should I scan?</h3>
+
+    <div class="paragraph">
+        <h5>
+            What you should scan really depends on what interests you.
+            Some people like to scan their room in order to create a new floor plan,
+            some people like gaussian splatting so they can film scenes in post instead of on set,
+            and some people just want 3D-models of trinkets that they can use in their scenes.
+            Here I have some ideas for you so you can get started creating what you want out of photogrammetry:
+        </h5>
+
+        <br>
+
+        <h4>Food</h4>
+        <h5>
+            The power of photogrammetry lies in the objects that are organic or are really difficult to model yourself.
+            This will make photogrammetry work for you so you get high quality models for very low effort.
+            Some of my most productive photoscans are those of food since they are very reusable and recognizable.<br>
+
+            <img src="../images/photogrammetry-galiamelon.jpg" alt="">
+
+            Scanned using KIRI Engine Pro at ~150 photos<br>
+            <br>
+
+            Grab a piece of fruit, a vegetable, a nut, a piece of meat and start scanning.
+            The easiest foods are those that are solid and do not deform when rotated.
+            I generally try to avoid things like lettuce and try to go for things like melons, apples, carrots, etc.
+            These will give the highest probability of succes.
+            You could also try out scanning the harder fruits and vegetables and see how those turn out.
+            You never know, you might end up with some high quality lettuce.
+        </h5>
+
+        <br>
+
+        <h4>Figurines</h4>
+        <h5>
+            Figurines are very easy to find in thrift shops or variety stores.
+            They are often very useful as decoration in your 3D environments or scenes and very easy to scan.
+            If you get lucky, you might even be able to effectively rig a scan and use it as a character.
+            At the very least, you get nice and high quality decorations.<br>
+
+            <img src="../images/photogrammetry-duck4.jpg" alt="">
+
+            Scanned using KIRI Engine Pro at ~300 photos<br>
+            <br>
+        </h5>
+
+        <h4>Plushies</h4>
+        <h5>
+            Plushies might be the last thing you think of to 3D-scan, but it might be worth it.
+            It's very hit-or-miss depending on the specific plushie, though.
+            You want to make sure you have a pretty solid plushie that does not deform when you balance it at different angles.
+            You also want to make sure that they can balance at the angles you want to use.
+            I have been able to succesfully scan only one plush since most aren't really suitable.<br>
+
+            <img src="../images/photogrammetry-snorlax.jpg" alt="Snorlax plushie">
+
+            Scanned using KIRI Engine Pro at ~300 photos<br>
+            <br>
+        </h5>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2024 baeac. All rights reserved.
+        </div>
+        <div class="footer-content">
+            <div class="links">
+                <a href="https://www.youtube.com/@baeac">YouTube</a>
+                <a href="https://baeac.gumroad.com">Gumroad</a>
+                <a href="https://www.patreon.com/baeac">Patreon</a>
+                <a href="https://www.cgtrader.com/baeac">CGTrader</a>
+            </div>
+            <div class="info">
+                <a class="email" href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+                <a href="./cookies">Cookies</a>
+                <a href="./about">About</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

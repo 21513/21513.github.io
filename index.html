@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>baeac</title>
+    <meta name="description" content="Official website for Blender YouTuber baeac. 3D-models, renders, free alpha textures and more">
+    <meta name="keywords" content="baeac, blender, 3d, b3d">
+
+    <meta property="og:title" content="baeac">
+    <meta property="og:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta property="og:image" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+    <meta property="og:url" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="baeac">
+    <meta name="twitter:description" content="Official website for Blender YouTuber baeac. Renders, (free) 3D-models, free alpha textures and more">
+    <meta name="twitter:image" content="https://www.baeac.xyz/renders/OvergrownBuilding.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "headline": "baeac",
+          "image": "https://www.baeac.xyz/renders/OvergrownBuilding.jpg",
+          "url": "https://www.baeac.xyz/",
+          "logo": "https://www.baeac.xyz/logo.png",
+          "description": "Blender YouTuber sharing 3D renders, models, and tips.",
+          "sameAs": [
+            "https://www.youtube.com/@baeac",
+            "https://baeac.gumroad.com",
+            "https://www.patreon.com/baeac",
+            "https://www.cgtrader.com/baeac",
+            "https://www.instagram.com/21513_"
+          ]
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5J7XZ5FQQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q5J7XZ5FQQ');
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var hasAccepted = localStorage.getItem('hasAccepted');
+            if (hasAccepted === 'true') {
+                closePopup();
+            }
+        });
+    </script>
+
+    <script>
+        function denyClick() {
+            closePopup();
+        }
+
+        function acceptClick() {
+            gtag('event', 'click', {
+                'event_category': 'Button Click',
+                'event_label': 'Accept Button Clicked'
+            });
+
+            localStorage.setItem('hasAccepted', 'true');
+
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <div class="popup">
+        <p>This website uses cookies to enhance user experience and analyze website traffic.</p>
+        <button class="deny-button" onclick="denyClick()">Deny</button>
+        <button class="accept-button" onclick="acceptClick()">Accept</button>
+    </div>
+
+    <div class="topbar">
+        <a href="#" onclick="scrollToTop()">
+            <svg class="icon" width="64" height="64" viewBox="0 0 176.10153 67.620079">
+                    <path
+                    d="m 57.374577,58.8336 v -8.78562 l 17.809042,-0.003 17.80904,-0.003 1.878907,-1.07764 c 3.332901,-1.91156 3.561431,-2.59666 3.842301,-11.51883 0.16592,-5.27042 0.42759,-8.35763 0.83604,-9.86347 2.216153,-8.17032 8.915243,-15.42954 16.457513,-17.83356 4.9045,-1.56326 13.60152,-1.47832 18.60929,0.18174 5.92932,1.96556 12.33575,8.06213 14.47216,13.77218 1.62525,4.34389 1.87743,5.95005 2.0716,13.19514 0.21228,7.91914 0.5614,9.32076 2.78953,11.19971 2.2053,1.85966 2.80937,1.95159 12.82428,1.95159 h 9.32725 v 8.76752 8.76753 h -9.46603 c -11.02069,0 -13.68247,-0.36744 -18.11517,-2.5007 -6.85382,-3.29844 -11.30454,-8.47627 -13.70809,-15.94764 -0.69802,-2.16985 -0.85733,-3.69156 -1.05172,-10.04613 -0.18947,-6.19382 -0.34438,-7.72269 -0.89585,-8.84065 -2.22001,-4.50057 -9.45415,-5.78103 -13.55649,-2.39952 -2.37539,1.95799 -2.52372,2.5472 -2.78367,11.05752 -0.21459,7.02517 -0.31754,7.91783 -1.22187,10.59409 -1.48188,4.38548 -3.29383,7.34471 -6.38996,10.43591 -3.08409,3.07918 -6.28392,5.04977 -10.562093,6.50458 l -2.800733,0.9524 -19.087637,0.11316 -19.087639,0.11317 z"
+                    id="path1"/>
+                    
+                    <path
+                    d="m 155.36997,34.072 -1.55258,-0.13983 v -1.54616 c 0,-4.12921 2.30693,-9.41388 5.66164,-12.96948 3.7471,-3.97154 8.86438,-6.47989 13.69999,-6.71536 l 2.00922,-0.0978 0.10221,4.43198 0.10223,4.43197 -1.74614,0.24636 c -2.56551,0.36197 -5.26823,1.80327 -7.14611,3.81088 -2.12918,2.27625 -3.19635,4.39594 -3.44987,6.85236 l -0.20254,1.96261 -2.96275,-0.0638 c -1.62949,-0.0351 -3.66139,-0.12675 -4.5153,-0.20367 z"
+                    id="path2"/>
+                    
+                    <path
+                    d="M 19.942895,66.97827 C 12.784561,65.44432 5.7829899,60.02082 2.6482224,53.58161 0.0461512,48.23663 0.2137224,50.19381 0.1014968,23.83672 L 0,0 h 8.5950375 8.5950385 v 21.46459 c 0,12.8791 0.142748,21.96233 0.356886,22.70898 0.603472,2.10419 2.156373,3.96059 4.139906,4.94903 4.059267,2.02282 8.92393,0.70864 11.103729,-2.99964 1.00075,-1.70247 1.025597,-1.88401 1.237838,-9.04362 0.154964,-5.22746 0.398346,-7.98189 0.855405,-9.68081 0.995982,-3.70215 3.237971,-7.97443 5.506726,-10.49349 2.428581,-2.69652 7.164519,-5.92939 10.225709,-6.98031 3.267024,-1.1216 8.631105,-1.60684 12.695256,-1.14844 4.455919,0.5026 5.763885,0.87723 9.099317,2.60627 4.0853,2.11777 8.916544,7.17308 10.94205,11.44955 1.916575,4.04647 2.516145,7.32477 2.516145,13.7577 v 5.78658 H 77.14133 68.413621 l -0.164328,-5.38838 c -0.184999,-6.06615 -0.593828,-7.49403 -2.579288,-9.00841 -3.611226,-2.75442 -7.878418,-2.74436 -11.512023,0.0271 -2.198693,1.67703 -2.610289,3.18401 -2.627638,9.62059 -0.01865,6.92001 -0.405659,9.77296 -1.824993,13.45342 -2.4004,6.22444 -6.477584,10.67823 -12.605681,13.77004 -5.209717,2.62847 -11.296613,3.38326 -17.156776,2.1275 z"
+                    id="path3"/>
+            </svg>
+        </a>
+
+        <div id="navSidebar" class="nav">
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            <a href="./artworks">Artworks</a>
+            <a href="./store">Store</a>
+            <a href="./articles">Articles</a>
+            <a href="./textures">Textures</a>
+            <a href="./about">About</a>
+        </div>
+        
+        <div class="open-button" onclick="openNav()">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </div>
+
+        <script src="script.js"></script>
+
+        <div class="toggle-topbar">
+            <div class="toggle">
+                <button id="theme-toggle">
+                    <span class="material-icons">
+                        light_mode
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</head>
+
+<body class="dark-mode">
+    <div class="title">
+        <h1>HOME</h1>
+    </div>
+
+    <h2>ARTWORKS</h2>
+
+    <div class="feed">
+        <div class="post">
+            <div class="carousel" data-carousel="3">
+                <div class="carousel-container">
+                    <img src="images/antique-shop-1.jpg" alt="Antique Shop 1">
+                    <img src="images/antique-shop-2.jpg" alt="Antique Shop 2">
+                    <img src="images/antique-shop-3.jpg" alt="Antique Shop 3">
+                    <img src="images/antique-shop-4.jpg" alt="Antique Shop 4">
+                </div>
+                <button class="previous">❮</button>
+                <button class="next">❯</button>
+            </div>
+            
+            <h4>Antique Shop</h4>
+            <h5>Antique shop environment made using Blenderkit and all my photoscanned figurines and models!<br>
+                You can get my photogrammetry collection here:
+                <a href="https://baeac.gumroad.com/l/photogrammetry-collection/">baeac.gumroad.com</a>
+            </h5>
+            <h6>October 16th, 2024</h6>
+        </div>
+
+        <div class="post">
+            <div class="carousel" data-carousel="3">
+                <div class="carousel-container">
+                    <img src="images/photogram-1.jpg" alt="Photogram 1">
+                    <img src="images/photogram-2.jpg" alt="Photogram 2">
+                    <img src="images/photogram-3.jpg" alt="Photogram 3">
+                    <img src="images/photogram-4.jpg" alt="Photogram 4">
+                    <img src="images/photogram-5.jpg" alt="Photogram 5">
+                    <img src="images/photogram-6.jpg" alt="Photogram 6">
+                    <img src="images/photogram-7.jpg" alt="Photogram 7">
+                </div>
+                <button class="previous">❮</button>
+                <button class="next">❯</button>
+            </div>
+            
+            <h4>Photograms</h4>
+            <h5>Experimenting with photograms where you place objects and cut-outs on photosensitive paper and develop that into images.</h5>
+            <h6>October 16th, 2024</h6>
+        </div>
+
+        <div class="post">
+            <div class="carousel" data-carousel="2">
+                <div class="carousel-container">
+                    <img src="images/photogrammetry-duck1.jpg" alt="Photogrammetry Duck Figurine 1">
+                    <img src="images/photogrammetry-duck2.jpg" alt="Photogrammetry Duck Figurine 2">
+                    <img src="images/photogrammetry-duck3.jpg" alt="Photogrammetry Duck Figurine 3">
+                    <img src="images/photogrammetry-duck4.jpg" alt="Photogrammetry Duck Figurine 4">
+                    <img src="images/photogrammetry-elephant.jpg" alt="Photogrammetry Elephant Figurine">
+                </div>
+                <button class="previous">❮</button>
+                <button class="next">❯</button>
+            </div>
+            
+            <h4>Photogrammetry</h4>
+            <h5>On this day, I started photoscanning figurines I find around the house or at thrift shops.
+                The idea is to create a high quality library that I can use for my future projects.
+                After some clean-up and collecting, I will be making them available.</h5>
+            <h6>October 8th, 2024</h6>
+        </div>
+
+        <div class="post">
+            <div class="video">
+                <video src="videos/earth-animation.webm"
+                    autoplay loop muted controls
+                    controlsList="
+                        nodownload
+                        noplaybackrate"
+                        disablePictureInPicture="true";>
+                </video>
+            </div>
+            <h4>Earth</h4>
+            <h5>Study on color grading in Davinci Resolve and Blender.
+                Only the results from Davinci Resolve are shown in the animation.
+            </h5>
+            <h6>August 15th, 2024</h6>
+        </div>
+    </div>
+
+    <h2>ARTICLES</h2>
+
+    <div class="article-list">
+        <a class="articles" href="articles/photogrammetry">
+            <h3>Photogrammetry for beginners</h3>
+            <div class="thumbnail">
+                <img src="images/photogrammetry-elephant.jpg" alt="">
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <div class="copyright">
+            &copy; 2024 baeac. All rights reserved.
+        </div>
+        <div class="footer-content">
+            <div class="links">
+                <a href="https://www.youtube.com/@baeac">YouTube</a>
+                <a href="https://baeac.gumroad.com">Gumroad</a>
+                <a href="https://www.patreon.com/baeac">Patreon</a>
+                <a href="https://www.cgtrader.com/baeac">CGTrader</a>
+            </div>
+            <div class="info">
+                <a class="email" href="mailto:baeacbusiness@gmail.com">baeacbusiness@gmail.com</a>
+                <a href="./cookies">Cookies</a>
+                <a href="./about">About</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
